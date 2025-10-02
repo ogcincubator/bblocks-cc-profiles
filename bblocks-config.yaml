@@ -1,0 +1,20 @@
+identifier-prefix: ogc.profiles.cc.
+
+name: Profiles of OGC standards using CC profiles
+abstract: | 
+  Working space for exploring Creative Commons 
+
+description: |
+  TASL is described [here](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)
+
+imports:
+  - default
+  - https://ogcincubator.github.io/geodcat-ogcapi-records
+  -
+  # note that a PROV profile is intended as a key example of extending GeoDCAT
+  # - https://ogcincubator.github.io/bblock-prov-schema/build/register.json
+
+
+
+
+

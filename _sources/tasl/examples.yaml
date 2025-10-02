@@ -1,0 +1,8 @@
+- title: TASL example
+  content: |-
+    This example of a TASL conformant DCAT record
+
+  snippets:
+    - language: ttl
+      ref: examples/tasl.ttl
+

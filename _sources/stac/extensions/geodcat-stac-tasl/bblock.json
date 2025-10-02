@@ -1,0 +1,19 @@
+{
+  "name": "GeoDCAT profile of STAC TASL extension",
+  "highlighted": true,
+  "abstract": "Defines a STAC extension for implementing the TASL profile",
+  "status": "under-development",
+  "dateTimeAddition": "2023-09-18T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-incubator",
+   "dependsOn": [
+
+      ],
+  "version": "0.1",
+  "dateOfLastChange": "2023-09-18",
+  "link": "https://github.com/opengeospatial/geodcat-ogcapi-records",
+  "sources": [
+  ],
+  "scope": "dev",
+  "tags": ["DCAT", "profile", "Records", "STAC", "TASL"]
+}
