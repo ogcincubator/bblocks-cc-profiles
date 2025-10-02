@@ -1,7 +1,7 @@
 {
   "@context": [
     {
-      "@base": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined"
+      "@base": "https://ogcincubator.github.io/bblocks-cc-profiles"
     },
     {
       "bblocks": "https://www.opengis.net/def/bblocks/",
@@ -112,7 +112,7 @@
   "name": "Building Blocks - Profiles of OGC standards using CC profiles",
   "abstract": "Working space for exploring Creative Commons \n",
   "description": "TASL is described [here](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)\n",
-  "modified": "2025-10-02T21:30:28.798640",
+  "modified": "2025-10-02T21:34:11.596993",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"cbdf0741daa8bb5e8edcce157ff8f4bb6d0d71fa",
@@ -122,14 +122,14 @@
   },
   "gitRepository": "https://github.com/ogcincubator/bblocks-cc-profiles",
   "gitHubRepository": "https://github.com/ogcincubator/bblocks-cc-profiles/blob/main/",
-  "baseURL": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/",
-  "viewerURL": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/",
-  "validationReport": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/build/tests/report.html",
+  "baseURL": "https://ogcincubator.github.io/bblocks-cc-profiles/",
+  "viewerURL": "https://ogcincubator.github.io/bblocks-cc-profiles/",
+  "validationReport": "https://ogcincubator.github.io/bblocks-cc-profiles/build/tests/report.html",
   "imports": [
     "https://opengeospatial.github.io/bblocks/register.json",
     "https://ogcincubator.github.io/geodcat-ogcapi-records/build/register.json"
   ],
-  "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/build/annotated/_cache",
+  "remoteCacheDir": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/_cache",
   "@type": [
     "skos:ConceptScheme",
     "dcat:Catalog"
@@ -163,21 +163,21 @@
         "profile"
       ],
       "shaclShapes": {},
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/_sources/tasl/",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/tasl/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/build/generateddocs/markdown/profiles/cc/tasl/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/markdown/profiles/cc/tasl/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/build/generateddocs/json-full/profiles/cc/tasl/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/json-full/profiles/cc/tasl/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/bblock/ogc.profiles.cc.tasl"
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.tasl"
         }
       },
       "@type": [
@@ -196,8 +196,8 @@
       "itemClass": "schema",
       "register": "ogc-incubator",
       "dependsOn": [
-        "ogc.contrib.stac.extensions.accuracy",
         "ogc.geo.geodcat.stac.geodcat-stac-item",
+        "ogc.contrib.stac.extensions.accuracy",
         "ogc.geo.geodcat.stac.geodcat-stac-collection"
       ],
       "version": "0.1",
@@ -217,29 +217,29 @@
           "https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/records-ontology/rules.shacl"
         ]
       },
-      "ldContext": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/context.jsonld",
+      "ldContext": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/context.jsonld",
       "schema": {
-        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/schema.yaml",
-        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/schema.json"
       },
-      "sourceSchema": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/_sources/stac/extensions/geodcat-stac-tasl/schema.yaml",
-      "sourceLdContext": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/_sources/stac/extensions/geodcat-stac-tasl/context.jsonld",
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/_sources/stac/extensions/geodcat-stac-tasl/",
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/stac/extensions/geodcat-stac-tasl/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/stac/extensions/geodcat-stac-tasl/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/stac/extensions/geodcat-stac-tasl/",
       "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-cc-profiles/blob/main/build/tests/profiles/cc/stac/extensions/geodcat-stac-tasl/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/build/generateddocs/markdown/profiles/cc/stac/extensions/geodcat-stac-tasl/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/markdown/profiles/cc/stac/extensions/geodcat-stac-tasl/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/build/generateddocs/json-full/profiles/cc/stac/extensions/geodcat-stac-tasl/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/json-full/profiles/cc/stac/extensions/geodcat-stac-tasl/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/bblock/ogc.profiles.cc.stac.extensions.geodcat-stac-tasl"
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.stac.extensions.geodcat-stac-tasl"
         }
       },
       "@type": [

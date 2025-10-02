@@ -83,7 +83,7 @@ Defines a STAC extension for implementing the TASL profile
 #### jsonld
 ```jsonld
 {
-  "@context": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/context.jsonld",
+  "@context": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/context.jsonld",
   "stac_version": "1.0.0",
   "stac_extensions": [
     "https://stac-extensions.github.io/accuracy/v1.0.0-beta.1/schema.json"
@@ -154,16 +154,16 @@ Defines a STAC extension for implementing the TASL profile
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix ns1: <urn:stac:vocab#> .
-@prefix ns2: <http://www.iana.org/assignments/> .
-@prefix ns3: <http://stacspec.org/ontology/core#> .
+@prefix ns2: <http://stacspec.org/ontology/core#> .
+@prefix ns3: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://example.com/stac/accuracy/example-1/item> dcterms:type "Feature" ;
-    ns3:datetime "2020-12-11T22:38:32+00:00"^^xsd:dateTime ;
-    rdfs:seeAlso [ ns2:relation <http://www.iana.org/assignments/relation/self> ;
+    ns2:datetime "2020-12-11T22:38:32+00:00"^^xsd:dateTime ;
+    rdfs:seeAlso [ ns3:relation <http://www.iana.org/assignments/relation/self> ;
             oa:hasTarget <https://example.com/examples/item.json> ] ;
     geojson:bbox ( 1.729e+02 1.3e+00 173 1.4e+00 ) ;
     geojson:geometry [ a geojson:Polygon ;
@@ -204,8 +204,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/schema.json)
-* JSON version: [schema.json](https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/schema.yaml)
+* YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/schema.json)
+* JSON version: [schema.json](https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/schema.yaml)
 
 
 # JSON-LD Context
@@ -413,7 +413,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/context.jsonld)
+[context.jsonld](https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/context.jsonld)
 
 
 # For developers

@@ -1,5 +1,5 @@
 {
-  "@context": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/context.jsonld",
+  "@context": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/context.jsonld",
   "stac_version": "1.0.0",
   "stac_extensions": [
     "https://stac-extensions.github.io/accuracy/v1.0.0-beta.1/schema.json"

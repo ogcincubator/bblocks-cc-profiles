@@ -27,7 +27,7 @@
     "profile"
   ],
   "shaclShapes": {},
-  "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/_sources/tasl/",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/tasl/",
   "rdfData": [],
   "validationPassed": true,
   "description": "## Title-Author-Source-License\n\nTBD\n",
@@ -40,7 +40,7 @@
           "language": "ttl",
           "ref": "examples/tasl.ttl",
           "code": "",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-cc-profiles/undefined/build/tests/profiles/cc/tasl/example_1_1.ttl"
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/build/tests/profiles/cc/tasl/example_1_1.ttl"
         }
       ]
     }
