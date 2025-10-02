@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.profiles.cc.tasl - TASL profile of DCAT",
+  "bblockName": "TASL profile of DCAT",
+  "bblockId": "ogc.profiles.cc.tasl",
+  "generated": "2025-10-02T21:30:35.846082+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}
