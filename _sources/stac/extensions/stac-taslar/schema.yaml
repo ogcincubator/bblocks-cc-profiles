@@ -1,0 +1,10 @@
+"$schema": https://json-schema.org/draft/2020-12/schema
+title: "CC TASL Extension"
+description: "STAC extension for the Creative Commons TASLAR attibution profile."
+allOf:
+  - anyOf:
+    - $ref: bblocks://ogc.contrib.stac.collection
+    - $ref: bblocks://ogc.contrib.stac.item
+    - $ref: bblocks://ogc.contrib.stac.collection-v1-0-0
+    - $ref: bblocks://ogc.contrib.stac.item-v1-0-0
+  # properties defining TASL/AR concepts - do any match to STAC elements?
