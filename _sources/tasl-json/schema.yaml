@@ -1,0 +1,12 @@
+"$schema": https://json-schema.org/draft/2020-12/schema
+title: "CC TASL Extension"
+description: "STAC extension for the Creative Commons TASLAR attibution profile."
+properties:
+  title:
+    type: string
+  author:
+    $ref: bblocks://ogc.ogc-utils.iri-or-curie
+  license:
+    $ref: bblocks://ogc.ogc-utils.iri-or-curie
+  source:
+    type: string

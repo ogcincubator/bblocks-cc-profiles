@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Simple JSON properties for CC TASLAR profile",
+    "highlighted": true,
+  "abstract": "A set of properties that can be added to any object enforcing TASLAR ",
+  "status": "under-development",
+  "dateTimeAddition": "2023-12-08T00:00:00Z",
+  "itemClass": "schema",
+  "register": "bblocks-stac",
+  "version": "0.1",
+  "dateOfLastChange": "2023-12-09",
+  "dependsOn": [
+    "ogc.profiles.cc.taslar"
+  ],
+  "sources": [
+
+  ],
+  "scope": "contrib",
+  "tags": ["TASL"]
+}

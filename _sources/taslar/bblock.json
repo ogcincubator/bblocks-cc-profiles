@@ -1,0 +1,23 @@
+{
+  "name": "TASLAR profile of DCAT/TASL",
+    "highlighted": true,
+  "abstract": "TASLAR extended profile definition.",
+  "status": "under-development",
+  "dateTimeAddition": "2023-09-18T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "0.1",
+  "dateOfLastChange": "2023-09-18",
+  "link": "https://github.com/opengeospatial/bblock-template",
+  "dependsOn": [
+        "ogc.profiles.cc.tasl"
+      ],
+  "sources": [
+    {
+      "title": "TASLAR Description",
+      "link": "https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution"
+    }
+  ],
+  "scope": "dev",
+  "tags": ["DCAT", "TASL" ,"profile"]
+}
