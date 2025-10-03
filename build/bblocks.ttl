@@ -1,0 +1,98 @@
+@prefix bblocks: <https://www.opengis.net/def/bblocks/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ogcincubator.github.io/bblocks-cc-profiles/build/bblocks.ttl> a prov:Entity ;
+    dct:format "text/turtle" ;
+    prov:wasAttributedTo _:N4215c78cd31a4fbcb2e86a8cdadbbe9a ;
+    prov:wasGeneratedBy [ a prov:Activity ;
+            prov:endedAtTime "2025-10-02T21:34:20.534860"^^xsd:dateTime ;
+            prov:startedAtTime "2025-10-02T21:34:20.473607"^^xsd:dateTime ;
+            prov:used [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+                [ a prov:Entity ;
+                    dct:format "application/json" ;
+                    dct:hasVersion "git:a4ea87f87403ce309858927fd4e6c9e588e8f7fa" ;
+                    rdfs:seeAlso <https://ogcincubator.github.io/bblocks-cc-profiles/build/register.json> ] ;
+            prov:wasAssociatedWith _:N4215c78cd31a4fbcb2e86a8cdadbbe9a ] .
+
+<https://ogcincubator.github.io/ogc.profiles.cc.stac.extensions.geodcat-stac-tasl> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Schema ;
+    rdfs:label "GeoDCAT profile of STAC TASL extension" ;
+    dct:abstract "Defines a STAC extension for implementing the TASL profile"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/json-full/profiles/cc/stac/extensions/geodcat-stac-tasl/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.stac.extensions.geodcat-stac-tasl" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/markdown/profiles/cc/stac/extensions/geodcat-stac-tasl/index.md" ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-10-02"^^xsd:date ;
+    skos:inScheme <https://ogcincubator.github.io/bblocks-cc-profiles/> ;
+    dcat:keyword "DCAT",
+        "Records",
+        "STAC",
+        "TASL",
+        "profile" ;
+    bblocks:dependsOn <https://ogcincubator.github.io/ogc.contrib.stac.extensions.accuracy>,
+        <https://ogcincubator.github.io/ogc.geo.geodcat.stac.geodcat-stac-collection>,
+        <https://ogcincubator.github.io/ogc.geo.geodcat.stac.geodcat-stac-item> ;
+    bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/context.jsonld> ;
+    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/schema.json>,
+        <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/schema.yaml> ;
+    bblocks:hasShaclRule <https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/records-ontology/rules.shacl> ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-cc-profiles/_sources/stac/extensions/geodcat-stac-tasl/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> .
+
+<https://ogcincubator.github.io/ogc.profiles.cc.tasl> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Model ;
+    rdfs:label "TASL profile of DCAT" ;
+    dct:abstract "Provides a CI/CT/CD environment for the TASL profile definition."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/markdown/profiles/cc/tasl/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/json-full/profiles/cc/tasl/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.tasl" ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-10-02"^^xsd:date ;
+    dct:source <https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution> ;
+    skos:inScheme <https://ogcincubator.github.io/bblocks-cc-profiles/> ;
+    dcat:keyword "DCAT",
+        "TASL",
+        "profile" ;
+    bblocks:dependsOn <https://ogcincubator.github.io/ogc.geo.geodcat.dcat> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> .
+
+<https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution> rdfs:label "TASL Description" .
+
+<https://ogcincubator.github.io/bblocks-cc-profiles/> a skos:ConceptScheme,
+        dcat:Catalog ;
+    rdfs:label "Building Blocks - Profiles of OGC standards using CC profiles" ;
+    dct:abstract """Working space for exploring Creative Commons 
+"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:description """TASL is described [here](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)
+"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    skos:prefLabel "Building Blocks - Profiles of OGC standards using CC profiles" ;
+    bblocks:hasValidationReport <https://ogcincubator.github.io/bblocks-cc-profiles/build/tests/report.html> ;
+    bblocks:imports <https://ogcincubator.github.io/geodcat-ogcapi-records/build/register.json>,
+        <https://opengeospatial.github.io/bblocks/register.json> .
+
+_:N4215c78cd31a4fbcb2e86a8cdadbbe9a a prov:Agent,
+        schema:SoftwareApplication ;
+    rdfs:label "OGC-NA tools" ;
+    dct:hasVersion "0.4.4" ;
+    rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
+
