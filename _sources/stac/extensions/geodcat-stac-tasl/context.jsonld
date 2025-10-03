@@ -1,7 +1,5 @@
 {
   "@context": {
-    "dqm": "https://standards.isotc211.org/19157/-3/1/dqc/content/qualityMeasure/",
-    "dqv": "http://dqv.org/tdb#",
-    "accuracy": "https://www.opengis.net/def/ogc-api/stac/accuracy/"
+
   }
 }

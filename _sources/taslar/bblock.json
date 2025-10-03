@@ -1,5 +1,6 @@
 {
   "name": "TASLAR profile of DCAT/TASL",
+    "highlighted": true,
   "abstract": "TASLAR extended profile definition.",
   "status": "under-development",
   "dateTimeAddition": "2023-09-18T00:00:00Z",
@@ -9,7 +10,7 @@
   "dateOfLastChange": "2023-09-18",
   "link": "https://github.com/opengeospatial/bblock-template",
   "dependsOn": [
-        "ogc.cc.tasl"
+        "ogc.profiles.cc.tasl"
       ],
   "sources": [
     {

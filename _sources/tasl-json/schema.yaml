@@ -2,9 +2,11 @@
 title: "CC TASL Extension"
 description: "STAC extension for the Creative Commons TASLAR attibution profile."
 properties:
-  title: string
+  title:
+    type: string
   author:
-    $ref: bblocks://ogc.utils.iri-or-curie
+    $ref: bblocks://ogc.ogc-utils.iri-or-curie
   license:
-    $ref: bblocks://ogc.utils.iri-or-curie
-  source: string
+    $ref: bblocks://ogc.ogc-utils.iri-or-curie
+  source:
+    type: string

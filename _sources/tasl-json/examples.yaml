@@ -2,7 +2,7 @@
 
   snippets:
     - language: json
-    - code: |
+      code: |-
         {  "id": "urn:mything",
            "title" : "A title",
            "author": "orcid:2002-11-22-33",
