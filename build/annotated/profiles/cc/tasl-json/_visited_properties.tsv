@@ -1,0 +1,5 @@
+path	@id
+/title	http://purl.org/dc/terms/title
+/author	http://purl.org/dc/terms/author
+/license	dcat:license
+/source	

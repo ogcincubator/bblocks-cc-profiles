@@ -149,35 +149,35 @@ Defines a STAC extension for implementing the TASL profile
 
 #### ttl
 ```ttl
-@prefix accuracy: <https://www.opengis.net/def/ogc-api/stac/accuracy/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix ns1: <urn:stac:vocab#> .
-@prefix ns2: <http://stacspec.org/ontology/core#> .
-@prefix ns3: <http://www.iana.org/assignments/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns2: <accuracy:> .
+@prefix ns3: <urn:stac:vocab#> .
+@prefix ns4: <http://stacspec.org/ontology/core#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://example.com/stac/accuracy/example-1/item> dcterms:type "Feature" ;
-    ns2:datetime "2020-12-11T22:38:32+00:00"^^xsd:dateTime ;
-    rdfs:seeAlso [ ns3:relation <http://www.iana.org/assignments/relation/self> ;
+<https://example.com/stac/accuracy/example-1/item> ns2:geometric_rmse 1 ;
+    ns2:geometric_x_bias 0 ;
+    ns2:geometric_x_stddev 5e-01 ;
+    ns2:geometric_y_bias 0 ;
+    ns2:geometric_y_stddev 5e-01 ;
+    ns2:measurement_absolute 2e-02 ;
+    ns2:measurement_relative 1e-02 ;
+    dcterms:type "Feature" ;
+    ns4:datetime "2020-12-11T22:38:32+00:00"^^xsd:dateTime ;
+    rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/self> ;
             oa:hasTarget <https://example.com/examples/item.json> ] ;
     geojson:bbox ( 1.729e+02 1.3e+00 173 1.4e+00 ) ;
     geojson:geometry [ a geojson:Polygon ;
             geojson:coordinates ( ( ( 1.729e+02 1.3e+00 ) ( 173 1.3e+00 ) ( 173 1.4e+00 ) ( 1.729e+02 1.4e+00 ) ( 1.729e+02 1.3e+00 ) ) ) ] ;
-    accuracy:geometric_rmse 1 ;
-    accuracy:geometric_x_bias 0 ;
-    accuracy:geometric_x_stddev 5e-01 ;
-    accuracy:geometric_y_bias 0 ;
-    accuracy:geometric_y_stddev 5e-01 ;
-    accuracy:measurement_absolute 2e-02 ;
-    accuracy:measurement_relative 1e-02 ;
-    ns1:extensions "https://stac-extensions.github.io/accuracy/v1.0.0-beta.1/schema.json" ;
-    ns1:hasAsset <https://example.com/stac/accuracy/example-1/data> ;
-    ns1:version "1.0.0" .
+    ns3:extensions "https://stac-extensions.github.io/accuracy/v1.0.0-beta.1/schema.json" ;
+    ns3:hasAsset <https://example.com/stac/accuracy/example-1/data> ;
+    ns3:version "1.0.0" .
 
 <https://example.com/stac/accuracy/example-1/data> dcat:downloadURL <https://example.com/examples/file.xyz> .
 
@@ -195,10 +195,6 @@ allOf:
 - anyOf:
   - $ref: https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/stac/geodcat-stac-item/schema.yaml
   - $ref: https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/stac/geodcat-stac-collection/schema.yaml
-x-jsonld-prefixes:
-  dqm: https://standards.isotc211.org/19157/-3/1/dqc/content/qualityMeasure/
-  dqv: http://dqv.org/tdb#
-  accuracy: https://www.opengis.net/def/ogc-api/stac/accuracy/
 
 ```
 
@@ -393,9 +389,6 @@ Links to the schema:
     "geojson": "https://purl.org/geojson/vocab#",
     "stac": "https://w3id.org/ogc/stac/core/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "dqm": "https://standards.isotc211.org/19157/-3/1/dqc/content/qualityMeasure/",
-    "dqv": "http://dqv.org/tdb#",
-    "accuracy": "https://www.opengis.net/def/ogc-api/stac/accuracy/",
     "w3ctime": "http://www.w3.org/2006/time#",
     "rec": "https://www.opengis.net/def/ogc-api/records/",
     "dcat": "http://www.w3.org/ns/dcat#",

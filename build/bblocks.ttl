@@ -9,18 +9,18 @@
 
 <https://ogcincubator.github.io/bblocks-cc-profiles/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:N4215c78cd31a4fbcb2e86a8cdadbbe9a ;
+    prov:wasAttributedTo _:N69f2278b88b8436589891bcaa2d06af0 ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2025-10-02T21:34:20.534860"^^xsd:dateTime ;
-            prov:startedAtTime "2025-10-02T21:34:20.473607"^^xsd:dateTime ;
+            prov:endedAtTime "2025-10-03T12:28:47.586274"^^xsd:dateTime ;
+            prov:startedAtTime "2025-10-03T12:28:47.521048"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
-                    dct:format "application/yaml" ;
-                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-                [ a prov:Entity ;
                     dct:format "application/json" ;
-                    dct:hasVersion "git:a4ea87f87403ce309858927fd4e6c9e588e8f7fa" ;
-                    rdfs:seeAlso <https://ogcincubator.github.io/bblocks-cc-profiles/build/register.json> ] ;
-            prov:wasAssociatedWith _:N4215c78cd31a4fbcb2e86a8cdadbbe9a ] .
+                    dct:hasVersion "git:6670f30b0d20c4d6f845aaca04db504b6344d669" ;
+                    rdfs:seeAlso <https://ogcincubator.github.io/bblocks-cc-profiles/build/register.json> ],
+                [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            prov:wasAssociatedWith _:N69f2278b88b8436589891bcaa2d06af0 ] .
 
 <https://ogcincubator.github.io/ogc.profiles.cc.stac.extensions.geodcat-stac-tasl> a skos:Concept,
         dcat:Dataset,
@@ -28,14 +28,14 @@
     rdfs:label "GeoDCAT profile of STAC TASL extension" ;
     dct:abstract "Defines a STAC extension for implementing the TASL profile"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/markdown/profiles/cc/stac/extensions/geodcat-stac-tasl/index.md" ],
+        [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/json-full/profiles/cc/stac/extensions/geodcat-stac-tasl/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.stac.extensions.geodcat-stac-tasl" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/markdown/profiles/cc/stac/extensions/geodcat-stac-tasl/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.stac.extensions.geodcat-stac-tasl" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-10-02"^^xsd:date ;
+    dct:modified "2025-10-03"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cc-profiles/> ;
     dcat:keyword "DCAT",
         "Records",
@@ -53,6 +53,39 @@
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
+<https://ogcincubator.github.io/ogc.profiles.cc.stac.extensions.stac-taslar> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Schema ;
+    rdfs:label "STAC TASLAR Extension" ;
+    dct:abstract "Placeholder for a STAC TASLAR extension - defines"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2023-12-08T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.stac.extensions.stac-taslar" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/markdown/profiles/cc/stac/extensions/stac-taslar/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/json-full/profiles/cc/stac/extensions/stac-taslar/index.json" ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-10-03"^^xsd:date ;
+    dct:source <https://github.com/stac-extensions/themes> ;
+    skos:inScheme <https://ogcincubator.github.io/bblocks-cc-profiles/> ;
+    dcat:keyword "stac",
+        "stac-extension",
+        "themes" ;
+    bblocks:dependsOn <https://ogcincubator.github.io/ogc.contrib.stac.collection>,
+        <https://ogcincubator.github.io/ogc.contrib.stac.collection-v1-0-0>,
+        <https://ogcincubator.github.io/ogc.contrib.stac.item>,
+        <https://ogcincubator.github.io/ogc.contrib.stac.item-v1-0-0>,
+        <https://ogcincubator.github.io/ogc.profiles.cc.tasl-json> ;
+    bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/stac-taslar/context.jsonld> ;
+    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/stac-taslar/schema.json>,
+        <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/stac-taslar/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-cc-profiles/_sources/stac/extensions/stac-taslar/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/contrib> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> .
+
+<https://github.com/stac-extensions/themes> rdfs:label "GitHub Repository" .
+
 <https://ogcincubator.github.io/ogc.profiles.cc.tasl> a skos:Concept,
         dcat:Dataset,
         bblocks:Model ;
@@ -61,12 +94,12 @@
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/markdown/profiles/cc/tasl/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/json-full/profiles/cc/tasl/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.tasl" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.tasl" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/json-full/profiles/cc/tasl/index.json" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-10-02"^^xsd:date ;
+    dct:modified "2025-10-03"^^xsd:date ;
     dct:source <https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution> ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cc-profiles/> ;
     dcat:keyword "DCAT",
@@ -76,7 +109,56 @@
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
-<https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution> rdfs:label "TASL Description" .
+<https://ogcincubator.github.io/ogc.profiles.cc.tasl-json> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Schema ;
+    rdfs:label "Simple JSON properties for CC TASLAR profile" ;
+    dct:abstract "A set of properties that can be added to any object enforcing TASLAR "^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2023-12-08T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/json-full/profiles/cc/tasl-json/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/markdown/profiles/cc/tasl-json/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.tasl-json" ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-10-03"^^xsd:date ;
+    skos:inScheme <https://ogcincubator.github.io/bblocks-cc-profiles/> ;
+    dcat:keyword "TASL" ;
+    bblocks:dependsOn <https://ogcincubator.github.io/ogc.ogc-utils.iri-or-curie>,
+        <https://ogcincubator.github.io/ogc.profiles.cc.taslar> ;
+    bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/tasl-json/context.jsonld> ;
+    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/tasl-json/schema.json>,
+        <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/tasl-json/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-cc-profiles/_sources/tasl-json/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/contrib> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> .
+
+<https://ogcincubator.github.io/ogc.profiles.cc.taslar> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Model ;
+    rdfs:label "TASLAR profile of DCAT/TASL" ;
+    dct:abstract "TASLAR extended profile definition."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/markdown/profiles/cc/taslar/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.taslar" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/json-full/profiles/cc/taslar/index.json" ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-10-03"^^xsd:date ;
+    dct:source <https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution> ;
+    skos:inScheme <https://ogcincubator.github.io/bblocks-cc-profiles/> ;
+    dcat:keyword "DCAT",
+        "TASL",
+        "profile" ;
+    bblocks:dependsOn <https://ogcincubator.github.io/ogc.profiles.cc.tasl> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> .
+
+<https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution> rdfs:label "TASL Description",
+        "TASLAR Description" .
 
 <https://ogcincubator.github.io/bblocks-cc-profiles/> a skos:ConceptScheme,
         dcat:Catalog ;
@@ -90,7 +172,7 @@
     bblocks:imports <https://ogcincubator.github.io/geodcat-ogcapi-records/build/register.json>,
         <https://opengeospatial.github.io/bblocks/register.json> .
 
-_:N4215c78cd31a4fbcb2e86a8cdadbbe9a a prov:Agent,
+_:N69f2278b88b8436589891bcaa2d06af0 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
     dct:hasVersion "0.4.4" ;

@@ -112,7 +112,7 @@
   "name": "Building Blocks - Profiles of OGC standards using CC profiles",
   "abstract": "Working space for exploring Creative Commons \n",
   "description": "TASL is described [here](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)\n",
-  "modified": "2025-10-02T21:34:11.596993",
+  "modified": "2025-10-03T12:28:36.537942",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"cbdf0741daa8bb5e8edcce157ff8f4bb6d0d71fa",
@@ -145,7 +145,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-02",
+      "dateOfLastChange": "2025-10-03",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
         "ogc.geo.geodcat.dcat"
@@ -187,6 +187,173 @@
       ]
     },
     {
+      "itemIdentifier": "ogc.profiles.cc.taslar",
+      "name": "TASLAR profile of DCAT/TASL",
+      "highlighted": true,
+      "abstract": "TASLAR extended profile definition.",
+      "status": "under-development",
+      "dateTimeAddition": "2023-09-18T00:00:00Z",
+      "itemClass": "model",
+      "register": "ogc-incubator",
+      "version": "0.1",
+      "dateOfLastChange": "2025-10-03",
+      "link": "https://github.com/opengeospatial/bblock-template",
+      "dependsOn": [
+        "ogc.profiles.cc.tasl"
+      ],
+      "sources": [
+        {
+          "title": "TASLAR Description",
+          "link": "https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution"
+        }
+      ],
+      "scope": "dev",
+      "tags": [
+        "DCAT",
+        "TASL",
+        "profile"
+      ],
+      "shaclShapes": {},
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/taslar/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/markdown/profiles/cc/taslar/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/json-full/profiles/cc/taslar/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.taslar"
+        }
+      },
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.profiles.cc.tasl-json",
+      "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+      "name": "Simple JSON properties for CC TASLAR profile",
+      "highlighted": true,
+      "abstract": "A set of properties that can be added to any object enforcing TASLAR ",
+      "status": "under-development",
+      "dateTimeAddition": "2023-12-08T00:00:00Z",
+      "itemClass": "schema",
+      "register": "bblocks-stac",
+      "version": "0.1",
+      "dateOfLastChange": "2025-10-03",
+      "dependsOn": [
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.profiles.cc.taslar"
+      ],
+      "sources": [],
+      "scope": "contrib",
+      "tags": [
+        "TASL"
+      ],
+      "shaclShapes": {},
+      "ldContext": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/tasl-json/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/tasl-json/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/tasl-json/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/tasl-json/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/tasl-json/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/tasl-json/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/bblocks-cc-profiles/blob/main/build/tests/profiles/cc/tasl-json/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/markdown/profiles/cc/tasl-json/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/json-full/profiles/cc/tasl-json/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.tasl-json"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.profiles.cc.stac.extensions.stac-taslar",
+      "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+      "name": "STAC TASLAR Extension",
+      "highlighted": true,
+      "abstract": "Placeholder for a STAC TASLAR extension - defines",
+      "status": "under-development",
+      "dateTimeAddition": "2023-12-08T00:00:00Z",
+      "itemClass": "schema",
+      "register": "bblocks-stac",
+      "version": "0.1",
+      "dateOfLastChange": "2025-10-03",
+      "sources": [
+        {
+          "title": "GitHub Repository",
+          "link": "https://github.com/stac-extensions/themes"
+        }
+      ],
+      "scope": "contrib",
+      "tags": [
+        "stac",
+        "stac-extension",
+        "themes"
+      ],
+      "shaclShapes": {},
+      "dependsOn": [
+        "ogc.contrib.stac.item-v1-0-0",
+        "ogc.profiles.cc.tasl-json",
+        "ogc.contrib.stac.collection",
+        "ogc.contrib.stac.collection-v1-0-0",
+        "ogc.contrib.stac.item"
+      ],
+      "ldContext": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/stac-taslar/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/stac-taslar/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/stac-taslar/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/stac/extensions/stac-taslar/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/stac/extensions/stac-taslar/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/stac/extensions/stac-taslar/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/bblocks-cc-profiles/blob/main/build/tests/profiles/cc/stac/extensions/stac-taslar/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/markdown/profiles/cc/stac/extensions/stac-taslar/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/json-full/profiles/cc/stac/extensions/stac-taslar/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.stac.extensions.stac-taslar"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
       "itemIdentifier": "ogc.profiles.cc.stac.extensions.geodcat-stac-tasl",
       "name": "GeoDCAT profile of STAC TASL extension",
       "highlighted": true,
@@ -201,7 +368,7 @@
         "ogc.geo.geodcat.stac.geodcat-stac-collection"
       ],
       "version": "0.1",
-      "dateOfLastChange": "2025-10-02",
+      "dateOfLastChange": "2025-10-03",
       "link": "https://github.com/opengeospatial/geodcat-ogcapi-records",
       "sources": [],
       "scope": "dev",

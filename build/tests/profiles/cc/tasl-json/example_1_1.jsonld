@@ -1,0 +1,8 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/tasl-json/context.jsonld",
+  "id": "urn:mything",
+  "title": "A title",
+  "author": "orcid:2002-11-22-33",
+  "source": "some text?",
+  "licence": "cc:ccby4"
+}
