@@ -112,7 +112,7 @@
   "name": "Building Blocks - Profiles of OGC standards using CC profiles",
   "abstract": "Working space for exploring Creative Commons \n",
   "description": "TASL is described [here](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)\n",
-  "modified": "2025-10-19T03:46:34.637356",
+  "modified": "2025-10-22T03:46:06.167386",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"451179d92066ae8647ef31351a79eb2ecabd2992",
@@ -145,7 +145,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-16",
+      "dateOfLastChange": "2025-10-19",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
         "ogc.geo.geodcat.dcat"
@@ -196,7 +196,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-16",
+      "dateOfLastChange": "2025-10-19",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
         "ogc.profiles.cc.tasl"
@@ -248,7 +248,7 @@
       "itemClass": "schema",
       "register": "bblocks-stac",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-16",
+      "dateOfLastChange": "2025-10-19",
       "dependsOn": [
         "ogc.profiles.cc.taslar",
         "ogc.ogc-utils.iri-or-curie"
@@ -301,7 +301,7 @@
       "itemClass": "schema",
       "register": "bblocks-stac",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-16",
+      "dateOfLastChange": "2025-10-19",
       "sources": [
         {
           "title": "GitHub Repository",
@@ -364,11 +364,11 @@
       "register": "ogc-incubator",
       "dependsOn": [
         "ogc.contrib.stac.extensions.accuracy",
-        "ogc.geo.geodcat.stac.geodcat-stac-item",
-        "ogc.geo.geodcat.stac.geodcat-stac-collection"
+        "ogc.geo.geodcat.stac.geodcat-stac-collection",
+        "ogc.geo.geodcat.stac.geodcat-stac-item"
       ],
       "version": "0.1",
-      "dateOfLastChange": "2025-10-16",
+      "dateOfLastChange": "2025-10-19",
       "link": "https://github.com/opengeospatial/geodcat-ogcapi-records",
       "sources": [],
       "scope": "dev",
