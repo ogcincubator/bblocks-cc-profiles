@@ -1,20 +1,20 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix ns1: <dcat:> .
-@prefix ns2: <http://www.iana.org/assignments/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns2: <dcat:> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix stac: <http://stacspec.org/ontology/core#> .
 @prefix thns: <https://w3id.org/ogc/stac/themes/> .
 
-<https://example.com/stac/themes/example-1/collection> ns1:license "Apache-2.0" ;
+<https://example.com/stac/themes/example-1/collection> ns2:license "Apache-2.0" ;
     dcterms:format "Collection" ;
     dcterms:title "A title" ;
     stac:description "A description" ;
     stac:extent [ ] ;
-    rdfs:seeAlso [ ns2:relation <http://www.iana.org/assignments/relation/self> ;
-            oa:hasTarget <https://example.com/examples/collection.json> ],
-        [ ns2:relation <http://www.iana.org/assignments/relation/item> ;
-            oa:hasTarget <https://example.com/examples/item.json> ] ;
+    rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/item> ;
+            oa:hasTarget <https://example.com/examples/item.json> ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            oa:hasTarget <https://example.com/examples/collection.json> ] ;
     thns:schemes [ thns:concepts <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_brewer>,
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_dobson>,
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_filter>,

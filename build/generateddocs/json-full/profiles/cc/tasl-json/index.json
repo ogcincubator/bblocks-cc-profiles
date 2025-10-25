@@ -11,10 +11,10 @@
   "itemClass": "schema",
   "register": "bblocks-stac",
   "version": "0.1",
-  "dateOfLastChange": "2025-10-19",
+  "dateOfLastChange": "2025-10-22",
   "dependsOn": [
-    "ogc.profiles.cc.taslar",
-    "ogc.ogc-utils.iri-or-curie"
+    "ogc.ogc-utils.iri-or-curie",
+    "ogc.profiles.cc.taslar"
   ],
   "sources": [],
   "scope": "contrib",
