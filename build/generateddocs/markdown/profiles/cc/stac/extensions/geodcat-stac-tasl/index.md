@@ -152,10 +152,10 @@ Defines a STAC extension for implementing the TASL profile
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix ns1: <http://stacspec.org/ontology/core#> .
+@prefix ns1: <urn:stac:vocab#> .
 @prefix ns2: <accuracy:> .
 @prefix ns3: <http://www.iana.org/assignments/> .
-@prefix ns4: <urn:stac:vocab#> .
+@prefix ns4: <http://stacspec.org/ontology/core#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -169,15 +169,15 @@ Defines a STAC extension for implementing the TASL profile
     ns2:measurement_absolute 2e-02 ;
     ns2:measurement_relative 1e-02 ;
     dcterms:type "Feature" ;
-    ns1:datetime "2020-12-11T22:38:32+00:00"^^xsd:dateTime ;
+    ns4:datetime "2020-12-11T22:38:32+00:00"^^xsd:dateTime ;
     rdfs:seeAlso [ ns3:relation <http://www.iana.org/assignments/relation/self> ;
             oa:hasTarget <https://example.com/examples/item.json> ] ;
     geojson:bbox ( 1.729e+02 1.3e+00 173 1.4e+00 ) ;
     geojson:geometry [ a geojson:Polygon ;
             geojson:coordinates ( ( ( 1.729e+02 1.3e+00 ) ( 173 1.3e+00 ) ( 173 1.4e+00 ) ( 1.729e+02 1.4e+00 ) ( 1.729e+02 1.3e+00 ) ) ) ] ;
-    ns4:extensions "https://stac-extensions.github.io/accuracy/v1.0.0-beta.1/schema.json" ;
-    ns4:hasAsset <https://example.com/stac/accuracy/example-1/data> ;
-    ns4:version "1.0.0" .
+    ns1:extensions "https://stac-extensions.github.io/accuracy/v1.0.0-beta.1/schema.json" ;
+    ns1:hasAsset <https://example.com/stac/accuracy/example-1/data> ;
+    ns1:version "1.0.0" .
 
 <https://example.com/stac/accuracy/example-1/data> dcat:downloadURL <https://example.com/examples/file.xyz> .
 
