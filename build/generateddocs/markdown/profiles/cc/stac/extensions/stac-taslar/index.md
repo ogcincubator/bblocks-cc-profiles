@@ -233,21 +233,21 @@ Placeholder for a STAC TASLAR extension - defines
 #### ttl
 ```ttl
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix ns1: <dcat:> .
-@prefix ns2: <http://www.iana.org/assignments/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns2: <dcat:> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix stac: <http://stacspec.org/ontology/core#> .
 @prefix thns: <https://w3id.org/ogc/stac/themes/> .
 
-<https://example.com/stac/themes/example-1/collection> ns1:license "Apache-2.0" ;
+<https://example.com/stac/themes/example-1/collection> ns2:license "Apache-2.0" ;
     dcterms:format "Collection" ;
     dcterms:title "A title" ;
     stac:description "A description" ;
     stac:extent [ ] ;
-    rdfs:seeAlso [ ns2:relation <http://www.iana.org/assignments/relation/self> ;
+    rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/self> ;
             oa:hasTarget <https://example.com/examples/collection.json> ],
-        [ ns2:relation <http://www.iana.org/assignments/relation/item> ;
+        [ ns1:relation <http://www.iana.org/assignments/relation/item> ;
             oa:hasTarget <https://example.com/examples/item.json> ] ;
     thns:schemes [ thns:concepts <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_atmosphericComposition>,
                 <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_observationPlatform>,
@@ -518,18 +518,18 @@ Placeholder for a STAC TASLAR extension - defines
     geojson:geometry [ a geojson:Polygon ;
             geojson:coordinates ( ( ( 5.6287e+00 4.42673e+01 ) ( 5.5996e+00 4.41958e+01 ) ( 5.57633e+00 4.413603e+01 ) ( 4.25061e+00 4.415852e+01 ) ( 4.27204e+00 4.514675e+01 ) ( 5.66762e+00 4.512267e+01 ) ( 5.6287e+00 4.42673e+01 ) ) ) ] ;
     ns1:assets <https://example.com/stac/themes/example-2/data> ;
-    thns:schemes [ thns:concepts [ thns:id "wiki::Summer" ;
-                    thns:name "Summer" ],
-                [ thns:id "wiki::Syncline" ;
-                    thns:name "Syncline" ] ;
-            thns:scheme "https://en.wikipedia.org" ],
-        [ thns:concepts [ thns:id "geonames::11071625" ;
+    thns:schemes [ thns:concepts [ thns:id "geonames::11071625" ;
                     thns:name "Auvergne-Rhône-Alpes" ],
-                [ thns:id "geonames::2976077" ;
-                    thns:name "Forêt de Saou" ],
                 [ thns:id "geonames::3017382" ;
-                    thns:name "France" ] ;
-            thns:scheme "https://www.geonames.org" ] .
+                    thns:name "France" ],
+                [ thns:id "geonames::2976077" ;
+                    thns:name "Forêt de Saou" ] ;
+            thns:scheme "https://www.geonames.org" ],
+        [ thns:concepts [ thns:id "wiki::Syncline" ;
+                    thns:name "Syncline" ],
+                [ thns:id "wiki::Summer" ;
+                    thns:name "Summer" ] ;
+            thns:scheme "https://en.wikipedia.org" ] .
 
 <https://example.com/stac/themes/example-2/data> dcterms:format "text/plain" ;
     oa:hasTarget <https://example.com/stac/themes/example-2/example.file> .

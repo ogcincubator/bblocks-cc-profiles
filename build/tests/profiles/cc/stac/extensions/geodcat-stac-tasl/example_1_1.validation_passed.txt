@@ -1,5 +1,5 @@
 Validation report for ogc.profiles.cc.stac.extensions.geodcat-stac-tasl - GeoDCAT profile of STAC TASL extension
-Generated 2025-11-07T03:46:12.711297+00:00
+Generated 2025-11-10T03:48:30.216921+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
