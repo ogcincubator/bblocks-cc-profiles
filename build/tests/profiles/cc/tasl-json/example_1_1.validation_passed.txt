@@ -1,5 +1,5 @@
 Validation report for ogc.profiles.cc.tasl-json - Simple JSON properties for CC TASLAR profile
-Generated 2025-11-10T03:48:22.861505+00:00
+Generated 2025-11-13T03:47:11.928174+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
