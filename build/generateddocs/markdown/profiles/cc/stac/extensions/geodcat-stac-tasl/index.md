@@ -154,8 +154,7 @@ Defines a STAC extension for implementing the TASL profile
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix ns1: <urn:stac:vocab#> .
 @prefix ns2: <accuracy:> .
-@prefix ns3: <http://stacspec.org/ontology/core#> .
-@prefix ns4: <http://www.iana.org/assignments/> .
+@prefix ns3: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -168,9 +167,9 @@ Defines a STAC extension for implementing the TASL profile
     ns2:geometric_y_stddev 5e-01 ;
     ns2:measurement_absolute 2e-02 ;
     ns2:measurement_relative 1e-02 ;
+    dcterms:date "2020-12-11T22:38:32+00:00"^^xsd:dateTime ;
     dcterms:type "Feature" ;
-    ns3:datetime "2020-12-11T22:38:32+00:00"^^xsd:dateTime ;
-    rdfs:seeAlso [ ns4:relation <http://www.iana.org/assignments/relation/self> ;
+    rdfs:seeAlso [ ns3:relation <http://www.iana.org/assignments/relation/self> ;
             oa:hasTarget <https://example.com/examples/item.json> ] ;
     geojson:bbox ( 1.729e+02 1.3e+00 173 1.4e+00 ) ;
     geojson:geometry [ a geojson:Polygon ;
@@ -264,12 +263,20 @@ Links to the schema:
       "@id": "urn:stac:vocab#hasAsset",
       "@container": "@id",
       "@context": {
+        "thumbnail": "http://stacspec.org/ontology/core#thumbnail",
+        "overview": "http://stacspec.org/ontology/core#overview",
+        "data": "http://stacspec.org/ontology/core#data",
+        "metadata": "http://stacspec.org/ontology/core#metadata",
+        "type": "dct:format",
+        "title": "dct:title",
+        "roles": {
+          "@id": "http://stacspec.org/ontology/core#roles",
+          "@container": "@set"
+        },
         "href": {
           "@id": "dcat:downloadURL",
           "@type": "@id"
-        },
-        "title": "dct:title",
-        "type": "dct:format"
+        }
       }
     },
     "time": {
@@ -370,7 +377,7 @@ Links to the schema:
     },
     "extent": "dct:extent",
     "datetime": {
-      "@id": "http://stacspec.org/ontology/core#datetime",
+      "@id": "dct:date",
       "@type": "xsd:dateTime"
     },
     "start_datetime": {
@@ -381,7 +388,7 @@ Links to the schema:
       "@id": "http://stacspec.org/ontology/core#end_datetime",
       "@type": "xsd:dateTime"
     },
-    "media_type": "http://stacspec.org/ontology/core#mediaType",
+    "media_type": "dct:format",
     "stac_version": "urn:stac:vocab#version",
     "stac_extensions": "urn:stac:vocab#extensions",
     "oa": "http://www.w3.org/ns/oa#",
@@ -400,7 +407,6 @@ Links to the schema:
     "vcard": "http://www.w3.org/2006/vcard/ns#",
     "prov": "http://www.w3.org/ns/prov#",
     "foaf": "http://xmlns.com/foaf/0.1/",
-    "geo": "http://www.opengis.net/ont/geosparql#",
     "@version": 1.1
   }
 }

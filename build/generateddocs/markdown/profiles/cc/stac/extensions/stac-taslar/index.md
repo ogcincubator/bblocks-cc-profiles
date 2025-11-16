@@ -233,21 +233,20 @@ Placeholder for a STAC TASLAR extension - defines
 #### ttl
 ```ttl
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix ns1: <dcat:> .
-@prefix ns2: <http://www.iana.org/assignments/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns2: <dcat:> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix stac: <http://stacspec.org/ontology/core#> .
 @prefix thns: <https://w3id.org/ogc/stac/themes/> .
 
-<https://example.com/stac/themes/example-1/collection> ns1:license "Apache-2.0" ;
+<https://example.com/stac/themes/example-1/collection> ns2:license "Apache-2.0" ;
+    dcterms:description "A description" ;
+    dcterms:extent [ ] ;
     dcterms:format "Collection" ;
     dcterms:title "A title" ;
-    stac:description "A description" ;
-    stac:extent [ ] ;
-    rdfs:seeAlso [ ns2:relation <http://www.iana.org/assignments/relation/item> ;
+    rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/item> ;
             oa:hasTarget <https://example.com/examples/item.json> ],
-        [ ns2:relation <http://www.iana.org/assignments/relation/self> ;
+        [ ns1:relation <http://www.iana.org/assignments/relation/self> ;
             oa:hasTarget <https://example.com/examples/collection.json> ] ;
     thns:schemes [ thns:concepts <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_atmosphericComposition>,
                 <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_observationPlatform>,
@@ -506,12 +505,11 @@ Placeholder for a STAC TASLAR extension - defines
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix stac: <http://stacspec.org/ontology/core#> .
 @prefix thns: <https://w3id.org/ogc/stac/themes/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://example.com/stac/themes/example-2/example> dcterms:format "Feature" ;
-    stac:datetime "2022-06-16T10:36:31.024000+00:00"^^xsd:dateTime ;
+<https://example.com/stac/themes/example-2/example> dcterms:date "2022-06-16T10:36:31.024000+00:00"^^xsd:dateTime ;
+    dcterms:format "Feature" ;
     rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/self> ;
             oa:hasTarget <https://example.com/examples/item.json> ] ;
     geojson:bbox ( 1.729e+02 1.3e+00 173 1.4e+00 ) ;
@@ -525,10 +523,10 @@ Placeholder for a STAC TASLAR extension - defines
             thns:scheme "https://en.wikipedia.org" ],
         [ thns:concepts [ thns:id "geonames::2976077" ;
                     thns:name "Forêt de Saou" ],
-                [ thns:id "geonames::11071625" ;
-                    thns:name "Auvergne-Rhône-Alpes" ],
                 [ thns:id "geonames::3017382" ;
-                    thns:name "France" ] ;
+                    thns:name "France" ],
+                [ thns:id "geonames::11071625" ;
+                    thns:name "Auvergne-Rhône-Alpes" ] ;
             thns:scheme "https://www.geonames.org" ] .
 
 <https://example.com/stac/themes/example-2/data> dcterms:format "text/plain" ;
@@ -638,11 +636,11 @@ Links to the schema:
       "@type": "xsd:string",
       "@id": "oa:hasTarget"
     },
-    "description": "stac:description",
+    "description": "dct:description",
     "license": "dcat:license",
-    "extent": "stac:extent",
+    "extent": "dct:extent",
     "datetime": {
-      "@id": "stac:datetime",
+      "@id": "dct:date",
       "@type": "xsd:dateTime"
     },
     "start_datetime": {
@@ -655,9 +653,19 @@ Links to the schema:
     },
     "assets": {
       "@id": "https://w3id.org/ogc/stac/core/assets",
-      "@container": "@id"
+      "@container": "@id",
+      "@context": {
+        "thumbnail": "stac:thumbnail",
+        "overview": "stac:overview",
+        "data": "stac:data",
+        "metadata": "stac:metadata",
+        "roles": {
+          "@id": "stac:roles",
+          "@container": "@set"
+        }
+      }
     },
-    "media_type": "stac:mediaType",
+    "media_type": "dct:format",
     "author": "dct:author",
     "themes": {
       "@id": "thns:schemes",
@@ -679,8 +687,6 @@ Links to the schema:
     "thns": "https://w3id.org/ogc/stac/themes/",
     "geojson": "https://purl.org/geojson/vocab#",
     "stac": "http://stacspec.org/ontology/core#",
-    "geo": "http://www.opengis.net/ont/geosparql#",
-    "prov": "http://www.w3.org/ns/prov#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "@version": 1.1
   }
