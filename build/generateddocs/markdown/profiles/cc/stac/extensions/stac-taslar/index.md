@@ -232,23 +232,32 @@ Placeholder for a STAC TASLAR extension - defines
 
 #### ttl
 ```ttl
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix ns1: <dcat:> .
-@prefix ns2: <http://www.iana.org/assignments/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rec: <https://www.opengis.net/def/ogc-api/records/> .
+@prefix stac: <https://w3id.org/ogc/stac/core/> .
 @prefix thns: <https://w3id.org/ogc/stac/themes/> .
 
-<https://example.com/stac/themes/example-1/collection> ns1:license "Apache-2.0" ;
+<https://example.com/stac/themes/example-1/collection> a <https://example.com/stac/themes/example-1/Collection> ;
     dcterms:description "A description" ;
     dcterms:extent [ ] ;
-    dcterms:format "Collection" ;
     dcterms:title "A title" ;
-    rdfs:seeAlso [ ns2:relation <http://www.iana.org/assignments/relation/self> ;
-            oa:hasTarget <https://example.com/examples/collection.json> ],
-        [ ns2:relation <http://www.iana.org/assignments/relation/item> ;
-            oa:hasTarget <https://example.com/examples/item.json> ] ;
-    thns:schemes [ thns:concepts <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_brewer>,
+    rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/item> ;
+            oa:hasTarget <https://example.com/examples/item.json> ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            oa:hasTarget <https://example.com/examples/collection.json> ] ;
+    dcat:license "Apache-2.0" ;
+    stac:hasExtension "https://stac-extensions.github.io/themes/v1.0.0/schema.json" ;
+    stac:version "1.0.0" ;
+    rec:themes [ thns:concepts <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_atmosphericComposition>,
+                <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_observationPlatform>,
+                <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_pollution>,
+                <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_rocketSounding> ;
+            thns:scheme "https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode" ],
+        [ thns:concepts <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_brewer>,
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_dobson>,
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_filter>,
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_hoelper>,
@@ -257,12 +266,7 @@ Placeholder for a STAC TASLAR extension - defines
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_saoz>,
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_spectral>,
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_vassey> ;
-            thns:scheme "https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode" ],
-        [ thns:concepts <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_atmosphericComposition>,
-                <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_observationPlatform>,
-                <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_pollution>,
-                <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_rocketSounding> ;
-            thns:scheme "https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode" ] .
+            thns:scheme "https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode" ] .
 
 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_brewer> thns:id "brewer" .
 
@@ -504,27 +508,30 @@ Placeholder for a STAC TASLAR extension - defines
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rec: <https://www.opengis.net/def/ogc-api/records/> .
 @prefix stac: <https://w3id.org/ogc/stac/core/> .
 @prefix thns: <https://w3id.org/ogc/stac/themes/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://example.com/stac/themes/example-2/example> dcterms:date "2022-06-16T10:36:31.024000+00:00"^^xsd:dateTime ;
-    dcterms:format "Feature" ;
+<https://example.com/stac/themes/example-2/example> a geojson:Feature ;
+    dcterms:date "2022-06-16T10:36:31.024000+00:00"^^xsd:dateTime ;
     rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/self> ;
             oa:hasTarget <https://example.com/examples/item.json> ] ;
     geojson:bbox ( 1.729e+02 1.3e+00 173 1.4e+00 ) ;
     geojson:geometry [ a geojson:Polygon ;
             geojson:coordinates ( ( ( 5.6287e+00 4.42673e+01 ) ( 5.5996e+00 4.41958e+01 ) ( 5.57633e+00 4.413603e+01 ) ( 4.25061e+00 4.415852e+01 ) ( 4.27204e+00 4.514675e+01 ) ( 5.66762e+00 4.512267e+01 ) ( 5.6287e+00 4.42673e+01 ) ) ) ] ;
     stac:assets <https://example.com/stac/themes/example-2/data> ;
-    thns:schemes [ thns:concepts [ thns:id "wiki::Summer" ;
-                    thns:name "Summer" ],
-                [ thns:id "wiki::Syncline" ;
-                    thns:name "Syncline" ] ;
+    stac:hasExtension "https://stac-extensions.github.io/themes/v1.0.0/schema.json" ;
+    stac:version "1.0.0" ;
+    rec:themes [ thns:concepts [ thns:id "wiki::Syncline" ;
+                    thns:name "Syncline" ],
+                [ thns:id "wiki::Summer" ;
+                    thns:name "Summer" ] ;
             thns:scheme "https://en.wikipedia.org" ],
-        [ thns:concepts [ thns:id "geonames::11071625" ;
-                    thns:name "Auvergne-Rhône-Alpes" ],
-                [ thns:id "geonames::2976077" ;
+        [ thns:concepts [ thns:id "geonames::2976077" ;
                     thns:name "Forêt de Saou" ],
+                [ thns:id "geonames::11071625" ;
+                    thns:name "Auvergne-Rhône-Alpes" ],
                 [ thns:id "geonames::3017382" ;
                     thns:name "France" ] ;
             thns:scheme "https://www.geonames.org" ] .
@@ -576,24 +583,60 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "href": {
-      "@type": "@id",
-      "@id": "oa:hasTarget"
-    },
-    "rel": {
+    "stac_version": "stac:version",
+    "stac_extensions": "stac:hasExtension",
+    "type": "@type",
+    "id": "@id",
+    "extent": "dct:extent",
+    "assets": {
       "@context": {
-        "@base": "http://www.iana.org/assignments/relation/"
+        "type": "dct:format",
+        "roles": {
+          "@id": "stac:roles",
+          "@container": "@set"
+        },
+        "thumbnail": "stac:thumbnail",
+        "overview": "stac:overview",
+        "data": "stac:data",
+        "metadata": "stac:metadata"
       },
-      "@id": "http://www.iana.org/assignments/relation",
-      "@type": "@id"
+      "@id": "stac:assets",
+      "@container": "@id"
     },
-    "type": "dct:format",
-    "hreflang": "dct:language",
     "title": {
       "@id": "dct:title",
       "@container": "@set"
     },
-    "length": "dct:extent",
+    "description": {
+      "@id": "dct:description",
+      "@container": "@set"
+    },
+    "links": {
+      "@context": {
+        "type": "dct:format",
+        "title": "rdfs:label"
+      },
+      "@id": "rdfs:seeAlso"
+    },
+    "keywords": {
+      "@id": "dcat:keyword",
+      "@container": "@set"
+    },
+    "license": "dcat:license",
+    "datetime": {
+      "@id": "dct:date",
+      "@type": "xsd:dateTime"
+    },
+    "start_datetime": {
+      "@id": "stac:start_datetime",
+      "@type": "xsd:dateTime"
+    },
+    "end_datetime": {
+      "@id": "stac:end_datetime",
+      "@type": "xsd:dateTime"
+    },
+    "providers": "stac:hasProvider",
+    "media_type": "dct:format",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeometryCollection": "geojson:GeometryCollection",
@@ -607,11 +650,13 @@ Links to the schema:
       "@container": "@set",
       "@id": "geojson:features"
     },
-    "id": "@id",
     "properties": "@nest",
     "geometry": {
       "@context": {
-        "type": "@type"
+        "coordinates": {
+          "@container": "@list",
+          "@id": "geojson:coordinates"
+        }
       },
       "@id": "geojson:geometry"
     },
@@ -619,58 +664,82 @@ Links to the schema:
       "@container": "@list",
       "@id": "geojson:bbox"
     },
-    "links": {
+    "conformsTo": {
+      "@container": "@set",
+      "@id": "dct:conformsTo",
+      "@type": "@id"
+    },
+    "time": "dct:temporal",
+    "created": "dct:created",
+    "updated": "dct:modified",
+    "language": "rec:language",
+    "languages": {
+      "@container": "@set",
+      "@id": "rec:languages"
+    },
+    "resourceLanguages": {
+      "@container": "@set",
+      "@id": "rec:resourceLanguages"
+    },
+    "externalIds": {
+      "@context": {
+        "scheme": "rec:scheme",
+        "value": "rec:id"
+      },
+      "@container": "@set",
+      "@id": "rec:scopedIdentifier"
+    },
+    "themes": {
+      "@container": "@set",
+      "@id": "rec:themes"
+    },
+    "formats": {
+      "@container": "@set",
+      "@id": "rec:format",
+      "@type": "@id"
+    },
+    "contacts": {
       "@context": {
         "type": "dct:type",
         "title": "rdfs:label"
       },
-      "@id": "rdfs:seeAlso"
+      "@container": "@set",
+      "@id": "dcat:contactPoint",
+      "@type": "@id"
     },
-    "coordinates": {
-      "@container": "@list",
-      "@id": "geojson:coordinates"
+    "rights": "dcat:rights",
+    "linkTemplates": {
+      "@context": {
+        "type": "dct:format",
+        "title": "rdfs:label",
+        "uriTemplate": {
+          "@type": "xsd:string",
+          "@id": "rec:uriTemplate"
+        },
+        "varBase": "rec:varBase",
+        "variables": {
+          "@id": "rec:hasVariable",
+          "@container": "@index",
+          "@index": "dct:identifier",
+          "@type": "@json"
+        }
+      },
+      "@id": "rec:hasLinkTemplate"
     },
-    "created": "dct:created",
-    "updated": "dct:modified",
-    "uriTemplate": {
-      "@type": "xsd:string",
+    "href": {
+      "@type": "@id",
       "@id": "oa:hasTarget"
     },
-    "description": "dct:description",
-    "license": "dcat:license",
-    "extent": "dct:extent",
-    "datetime": {
-      "@id": "dct:date",
-      "@type": "xsd:dateTime"
-    },
-    "start_datetime": {
-      "@id": "stac:start_datetime",
-      "@type": "xsd:dateTime"
-    },
-    "end_datetime": {
-      "@id": "stac:end_datetime",
-      "@type": "xsd:dateTime"
-    },
-    "assets": {
-      "@id": "stac:assets",
-      "@container": "@id",
+    "rel": {
       "@context": {
-        "thumbnail": "stac:thumbnail",
-        "overview": "stac:overview",
-        "data": "stac:data",
-        "metadata": "stac:metadata",
-        "roles": {
-          "@id": "stac:roles",
-          "@container": "@set"
-        }
-      }
+        "@base": "http://www.iana.org/assignments/relation/"
+      },
+      "@id": "http://www.iana.org/assignments/relation",
+      "@type": "@id"
     },
-    "media_type": "dct:format",
+    "hreflang": "dct:language",
+    "length": "dct:extent",
     "author": "dct:author",
-    "themes": {
-      "@id": "thns:schemes",
-      "@container": "@set"
-    },
     "concepts": {
       "@id": "thns:concepts",
       "@container": "@set",
@@ -681,13 +750,23 @@ Links to the schema:
       }
     },
     "scheme": "thns:scheme",
-    "oa": "http://www.w3.org/ns/oa#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "stac": "https://w3id.org/ogc/stac/core/",
     "dct": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "oa": "http://www.w3.org/ns/oa#",
     "thns": "https://w3id.org/ogc/stac/themes/",
     "geojson": "https://purl.org/geojson/vocab#",
-    "stac": "https://w3id.org/ogc/stac/core/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "rec": "https://www.opengis.net/def/ogc-api/records/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "w3ctime": "http://www.w3.org/2006/time#",
+    "dctype": "http://purl.org/dc/dcmitype/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "@version": 1.1
   }
 }

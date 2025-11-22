@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.profiles.cc.stac.extensions.stac-taslar - STAC TASLAR Extension",
   "bblockName": "STAC TASLAR Extension",
   "bblockId": "ogc.profiles.cc.stac.extensions.stac-taslar",
-  "generated": "2025-11-19T03:46:18.133000+00:00",
+  "generated": "2025-11-22T03:42:38.263740+00:00",
   "result": true,
   "items": [
     {
@@ -41,7 +41,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 41,
+              "size": 43,
               "isError": false,
               "message": "Output Turtle example_1_1.ttl created"
             }
@@ -97,7 +97,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_2_1.ttl",
-              "size": 83,
+              "size": 85,
               "isError": false,
               "message": "Output Turtle example_2_1.ttl created"
             }

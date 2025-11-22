@@ -149,7 +149,6 @@ Defines a STAC extension for implementing the TASL profile
 
 #### ttl
 ```ttl
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix ns1: <accuracy:> .
@@ -160,7 +159,8 @@ Defines a STAC extension for implementing the TASL profile
 @prefix stac: <https://w3id.org/ogc/stac/core/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://example.com/stac/accuracy/example-1/item> ns1:geometric_rmse 1 ;
+<https://example.com/stac/accuracy/example-1/item> a geojson:Feature ;
+    ns1:geometric_rmse 1 ;
     ns1:geometric_x_bias 0 ;
     ns1:geometric_x_stddev 5e-01 ;
     ns1:geometric_y_bias 0 ;
@@ -168,17 +168,14 @@ Defines a STAC extension for implementing the TASL profile
     ns1:measurement_absolute 2e-02 ;
     ns1:measurement_relative 1e-02 ;
     dcterms:date "2020-12-11T22:38:32+00:00"^^xsd:dateTime ;
-    dcterms:type "Feature" ;
     rdfs:seeAlso [ ns2:relation <http://www.iana.org/assignments/relation/self> ;
             oa:hasTarget <https://example.com/examples/item.json> ] ;
     geojson:bbox ( 1.729e+02 1.3e+00 173 1.4e+00 ) ;
     geojson:geometry [ a geojson:Polygon ;
             geojson:coordinates ( ( ( 1.729e+02 1.3e+00 ) ( 173 1.3e+00 ) ( 173 1.4e+00 ) ( 1.729e+02 1.4e+00 ) ( 1.729e+02 1.3e+00 ) ) ) ] ;
-    stac:extensions "https://stac-extensions.github.io/accuracy/v1.0.0-beta.1/schema.json" ;
-    stac:hasAsset <https://example.com/stac/accuracy/example-1/data> ;
+    stac:hasAsset [ stac:data [ oa:hasTarget <https://example.com/examples/file.xyz> ] ] ;
+    stac:hasExtension "https://stac-extensions.github.io/accuracy/v1.0.0-beta.1/schema.json" ;
     stac:version "1.0.0" .
-
-<https://example.com/stac/accuracy/example-1/data> dcat:downloadURL <https://example.com/examples/file.xyz> .
 
 
 ```
@@ -208,173 +205,30 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "href": {
-      "@type": "@id",
-      "@id": "oa:hasTarget"
-    },
-    "rel": {
+    "links": {
       "@context": {
-        "@base": "http://www.iana.org/assignments/relation/"
+        "type": "dct:type",
+        "title": "rdfs:label"
       },
-      "@id": "http://www.iana.org/assignments/relation",
-      "@type": "@id"
+      "@id": "rdfs:seeAlso"
     },
-    "type": "dct:type",
-    "hreflang": "dct:language",
-    "title": "rdfs:label",
-    "length": "dct:extent",
-    "Feature": "geojson:Feature",
-    "FeatureCollection": "geojson:FeatureCollection",
-    "GeometryCollection": "geojson:GeometryCollection",
-    "LineString": "geojson:LineString",
-    "MultiLineString": "geojson:MultiLineString",
-    "MultiPoint": "geojson:MultiPoint",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "Point": "geojson:Point",
-    "Polygon": "geojson:Polygon",
-    "features": {
-      "@container": "@set",
-      "@id": "geojson:features"
-    },
+    "stac_version": "stac:version",
+    "stac_extensions": "stac:hasExtension",
     "id": "@id",
-    "properties": "@nest",
-    "geometry": {
-      "@context": {
-        "type": "@type"
-      },
-      "@id": "geojson:geometry"
+    "title": {
+      "@id": "dct:title",
+      "@container": "@set"
     },
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
-    },
-    "links": "rdfs:seeAlso",
-    "coordinates": {
-      "@container": "@list",
-      "@id": "geojson:coordinates"
-    },
-    "created": "dct:created",
-    "updated": "dct:modified",
-    "uriTemplate": {
-      "@type": "xsd:string",
-      "@id": "oa:hasTarget"
-    },
-    "assets": {
-      "@id": "stac:hasAsset",
-      "@container": "@id",
-      "@context": {
-        "thumbnail": "stac:thumbnail",
-        "overview": "stac:overview",
-        "data": "stac:data",
-        "metadata": "stac:metadata",
-        "type": "dct:format",
-        "title": "dct:title",
-        "roles": {
-          "@id": "stac:roles",
-          "@container": "@set"
-        },
-        "href": {
-          "@id": "dcat:downloadURL",
-          "@type": "@id"
-        }
-      }
-    },
-    "time": {
-      "@id": "dct:temporal",
-      "@context": {
-        "interval": {
-          "@id": "w3ctime:hasTime",
-          "@container": "@list"
-        },
-        "resolution": "rec:iso8601period"
-      }
-    },
+    "type": "@type",
     "description": {
-      "@container": "@set",
-      "@id": "dct:description"
+      "@id": "dct:description",
+      "@container": "@set"
     },
     "keywords": {
-      "@container": "@set",
-      "@id": "dct:subject"
-    },
-    "conformsTo": {
-      "@container": "@set",
-      "@id": "dct:conformsTo",
-      "@type": "@id"
-    },
-    "language": {
-      "@id": "rec:language",
-      "@context": {
-        "code": "rec:languageCode",
-        "name": "skos:prefLabel"
-      }
-    },
-    "languages": {
-      "@container": "@set",
-      "@id": "rec:languages",
-      "@context": {
-        "code": "rec:languageCode",
-        "name": "skos:prefLabel"
-      }
-    },
-    "resourceLanguages": {
-      "@container": "@set",
-      "@id": "rec:resourceLanguages",
-      "@context": {
-        "code": "rec:languageCode",
-        "name": "skos:prefLabel"
-      }
-    },
-    "externalIds": {
-      "@container": "@set",
-      "@id": "rec:scopedIdentifier",
-      "@context": {
-        "scheme": "rec:scheme",
-        "value": "rec:id"
-      }
-    },
-    "themes": {
-      "@container": "@set",
-      "@id": "rec:themes",
-      "@context": {
-        "concepts": {
-          "@id": "rec:concept",
-          "@context": {
-            "id": {
-              "@type": "xsd:string",
-              "@id": "rec:conceptID"
-            },
-            "url": {
-              "@type": "@id",
-              "@id": "dcat:theme"
-            }
-          }
-        },
-        "scheme": "rec:scheme"
-      }
-    },
-    "formats": {
-      "@id": "rec:format",
-      "@context": {
-        "name": "rec:name"
-      }
-    },
-    "contacts": {
-      "@container": "@set",
-      "@id": "dcat:contactPoint",
-      "@type": "@id"
+      "@id": "dct:subject",
+      "@container": "@set"
     },
     "license": "dct:license",
-    "accessrights": "dct:accessRights",
-    "linkTemplates": "rec:hasLinkTemplate",
-    "variables": {
-      "@container": "@id",
-      "@id": "rec:hasVariable",
-      "@context": {
-        "@base": "http://example.com/variables/",
-        "@vocab": "https://www.opengis.net/def/ogc-api/records/"
-      }
-    },
     "extent": "dct:extent",
     "datetime": {
       "@id": "dct:date",
@@ -388,21 +242,146 @@ Links to the schema:
       "@id": "stac:end_datetime",
       "@type": "xsd:dateTime"
     },
+    "assets": {
+      "@id": "stac:hasAsset",
+      "@container": "@set",
+      "@context": {
+        "thumbnail": "stac:thumbnail",
+        "overview": "stac:overview",
+        "data": "stac:data",
+        "metadata": "stac:metadata",
+        "type": "dct:format",
+        "roles": {
+          "@id": "stac:roles",
+          "@container": "@set"
+        }
+      }
+    },
+    "providers": "stac:hasProvider",
     "media_type": "dct:format",
-    "stac_version": "stac:version",
-    "stac_extensions": "stac:extensions",
-    "oa": "http://www.w3.org/ns/oa#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "dct": "http://purl.org/dc/terms/",
-    "geojson": "https://purl.org/geojson/vocab#",
+    "Feature": "geojson:Feature",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
+    "Polygon": "geojson:Polygon",
+    "features": {
+      "@container": "@set",
+      "@id": "geojson:features"
+    },
+    "properties": "@nest",
+    "geometry": {
+      "@context": {
+        "coordinates": {
+          "@container": "@list",
+          "@id": "geojson:coordinates"
+        }
+      },
+      "@id": "geojson:geometry"
+    },
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
+    },
+    "conformsTo": {
+      "@container": "@set",
+      "@id": "dct:conformsTo",
+      "@type": "@id"
+    },
+    "time": "dct:temporal",
+    "created": "dct:created",
+    "updated": "dct:modified",
+    "language": "rec:language",
+    "languages": {
+      "@container": "@set",
+      "@id": "rec:languages"
+    },
+    "resourceLanguages": {
+      "@container": "@set",
+      "@id": "rec:resourceLanguages"
+    },
+    "externalIds": {
+      "@context": {
+        "scheme": "rec:scheme",
+        "value": "rec:id"
+      },
+      "@container": "@set",
+      "@id": "rec:scopedIdentifier"
+    },
+    "themes": {
+      "@container": "@set",
+      "@id": "rec:themes"
+    },
+    "formats": {
+      "@container": "@set",
+      "@id": "rec:format",
+      "@type": "@id"
+    },
+    "contacts": {
+      "@context": {
+        "type": "dct:type",
+        "title": "rdfs:label"
+      },
+      "@container": "@set",
+      "@id": "dcat:contactPoint",
+      "@type": "@id"
+    },
+    "rights": "dcat:rights",
+    "linkTemplates": {
+      "@context": {
+        "type": "dct:format",
+        "title": "rdfs:label",
+        "uriTemplate": {
+          "@type": "xsd:string",
+          "@id": "rec:uriTemplate"
+        },
+        "varBase": "rec:varBase",
+        "variables": {
+          "@id": "rec:hasVariable",
+          "@container": "@index",
+          "@index": "dct:identifier",
+          "@type": "@json"
+        }
+      },
+      "@id": "rec:hasLinkTemplate"
+    },
+    "accessrights": "dct:accessRights",
+    "variables": {
+      "@container": "@id",
+      "@id": "rec:hasVariable",
+      "@context": {
+        "@base": "http://example.com/variables/",
+        "@vocab": "https://www.opengis.net/def/ogc-api/records/"
+      }
+    },
+    "href": {
+      "@type": "@id",
+      "@id": "oa:hasTarget"
+    },
+    "rel": {
+      "@context": {
+        "@base": "http://www.iana.org/assignments/relation/"
+      },
+      "@id": "http://www.iana.org/assignments/relation",
+      "@type": "@id"
+    },
+    "hreflang": "dct:language",
+    "length": "dct:extent",
     "stac": "https://w3id.org/ogc/stac/core/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "w3ctime": "http://www.w3.org/2006/time#",
-    "rec": "https://www.opengis.net/def/ogc-api/records/",
+    "dct": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "geojson": "https://purl.org/geojson/vocab#",
     "dcat": "http://www.w3.org/ns/dcat#",
+    "rec": "https://www.opengis.net/def/ogc-api/records/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
     "owl": "http://www.w3.org/2002/07/owl#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "w3ctime": "http://www.w3.org/2006/time#",
     "dctype": "http://purl.org/dc/dcmitype/",
     "vcard": "http://www.w3.org/2006/vcard/ns#",
     "prov": "http://www.w3.org/ns/prov#",
