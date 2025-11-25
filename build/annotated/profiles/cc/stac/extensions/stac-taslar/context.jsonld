@@ -107,10 +107,24 @@
       "@id": "rec:scopedIdentifier"
     },
     "themes": {
+      "@context": {
+        "concepts": {
+          "@context": {
+            "id": "thns:id",
+            "url": "@id"
+          },
+          "@id": "thns:concepts",
+          "@container": "@set"
+        }
+      },
       "@container": "@set",
       "@id": "rec:themes"
     },
     "formats": {
+      "@context": {
+        "name": "rec:name",
+        "mediaType": "rec:mediaType"
+      },
       "@container": "@set",
       "@id": "rec:format",
       "@type": "@id"
