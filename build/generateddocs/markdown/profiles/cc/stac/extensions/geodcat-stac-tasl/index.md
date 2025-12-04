@@ -206,29 +206,9 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "stac_version": "stac:version",
     "stac_extensions": "stac:hasExtension",
     "type": "dct:format",
     "id": "@id",
-    "title": {
-      "@id": "dct:title",
-      "@container": "@set"
-    },
-    "description": {
-      "@id": "dct:description",
-      "@container": "@set"
-    },
-    "keywords": {
-      "@id": "dcat:keyword",
-      "@container": "@set"
-    },
-    "license": "dcat:license",
-    "providers": {
-      "@context": {
-        "name": {},
-        "url": {}
-      }
-    },
     "extent": {
       "@context": {
         "spatial": {},
@@ -240,9 +220,10 @@ Links to the schema:
       },
       "@id": "dct:extent"
     },
-    "assets": {
-      "@id": "stac:hasAsset",
-      "@container": "@set"
+    "item_assets": {
+      "@context": {
+        "type": "@type"
+      }
     },
     "links": {
       "@context": {
@@ -253,10 +234,10 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id"
         },
-        "type": "dct:type",
-        "title": "rdfs:label",
         "anchor": {},
+        "type": "dct:type",
         "hreflang": "dct:language",
+        "title": "rdfs:label",
         "length": "dct:extent",
         "method": {},
         "headers": {},
@@ -270,10 +251,17 @@ Links to the schema:
         "maximum": {}
       }
     },
-    "item_assets": {
-      "@context": {
-        "type": "@type"
-      }
+    "title": {
+      "@id": "dct:title",
+      "@container": "@set"
+    },
+    "description": {
+      "@id": "dct:description",
+      "@container": "@set"
+    },
+    "keywords": {
+      "@id": "dcat:keyword",
+      "@container": "@set"
     },
     "roles": {
       "@id": "stac:roles",
@@ -310,7 +298,19 @@ Links to the schema:
     "constellation": {},
     "mission": {},
     "gsd": {},
+    "license": "dcat:license",
+    "providers": {
+      "@context": {
+        "name": {},
+        "url": {}
+      }
+    },
     "@vocab": "https://w3id.org/ogc/stac/assets/",
+    "assets": {
+      "@id": "stac:hasAsset",
+      "@container": "@set"
+    },
+    "stac_version": "stac:version",
     "media_type": "dct:format",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
@@ -380,6 +380,7 @@ Links to the schema:
       },
       "@id": "rec:hasLinkTemplate"
     },
+    "collection": {},
     "language": {
       "@context": {
         "code": "rec:languageCode",
@@ -496,7 +497,6 @@ Links to the schema:
       "@type": "@id"
     },
     "rights": "dcat:rights",
-    "collection": {},
     "accuracy:geometric_x_bias": {},
     "accuracy:geometric_y_bias": {},
     "accuracy:geometric_x_stddev": {},

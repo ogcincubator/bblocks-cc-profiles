@@ -2,12 +2,12 @@
   "name": "Profiles of OGC standards using CC profiles",
   "abstract": "Working space for exploring Creative Commons \n",
   "description": "TASL is described [here](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)\n",
-  "modified": "2025-12-01T04:01:51.113708",
+  "modified": "2025-12-04T03:49:10.262946",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"07a1a91baa1dbde1a32d8591bc63333f7c57a9b9",
-      "shortCommitId": "\"07a1a9",
-      "date": "2025-11-29T00:51:03+00:00\""
+      "commitId": "\"68167baf1c7280295a0aecc42e40ac421e1a4a6d",
+      "shortCommitId": "\"68167b",
+      "date": "2025-12-03T13:13:23+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/bblocks-cc-profiles",
@@ -30,7 +30,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2025-11-28",
+      "dateOfLastChange": "2025-12-01",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
         "ogc.geo.geodcat.dcat"
@@ -76,7 +76,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2025-11-28",
+      "dateOfLastChange": "2025-12-01",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
         "ogc.profiles.cc.tasl"
@@ -123,7 +123,7 @@
       "itemClass": "schema",
       "register": "bblocks-stac",
       "version": "0.1",
-      "dateOfLastChange": "2025-11-28",
+      "dateOfLastChange": "2025-12-01",
       "dependsOn": [
         "ogc.profiles.cc.taslar",
         "ogc.ogc-utils.iri-or-curie"
@@ -171,7 +171,7 @@
       "itemClass": "schema",
       "register": "bblocks-stac",
       "version": "0.1",
-      "dateOfLastChange": "2025-11-28",
+      "dateOfLastChange": "2025-12-01",
       "sources": [
         {
           "title": "GitHub Repository",
@@ -190,11 +190,11 @@
         ]
       },
       "dependsOn": [
+        "ogc.contrib.stac.item",
         "ogc.contrib.stac.item-v1-0-0",
         "ogc.contrib.stac.collection-v1-0-0",
-        "ogc.contrib.stac.item",
-        "ogc.contrib.stac.collection",
-        "ogc.profiles.cc.tasl-json"
+        "ogc.profiles.cc.tasl-json",
+        "ogc.contrib.stac.collection"
       ],
       "ldContext": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/stac-taslar/context.jsonld",
       "schema": {
@@ -237,7 +237,7 @@
         "ogc.geo.geodcat.stac.geodcat-stac-collection"
       ],
       "version": "0.1",
-      "dateOfLastChange": "2025-11-28",
+      "dateOfLastChange": "2025-12-01",
       "link": "https://github.com/opengeospatial/geodcat-ogcapi-records",
       "sources": [],
       "scope": "dev",
