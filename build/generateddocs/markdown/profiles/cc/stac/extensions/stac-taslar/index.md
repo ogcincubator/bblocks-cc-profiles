@@ -250,10 +250,10 @@ Placeholder for a STAC TASLAR extension - defines
             :temporal [ :interval "2015-06-23T00:00:00Z" ] ] ;
     dcterms:format "Collection" ;
     dcterms:title "A title" ;
-    rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/item> ;
-            oa:hasTarget <https://example.com/examples/item.json> ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            oa:hasTarget <https://example.com/examples/collection.json> ] ;
+    rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            oa:hasTarget <https://example.com/examples/collection.json> ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/item> ;
+            oa:hasTarget <https://example.com/examples/item.json> ] ;
     dcat:license "Apache-2.0" ;
     stac:hasExtension "https://stac-extensions.github.io/themes/v1.0.0/schema.json" ;
     stac:version "1.0.0" ;
@@ -530,18 +530,18 @@ Placeholder for a STAC TASLAR extension - defines
                     oa:hasTarget <https://example.com/stac/themes/example-2/example.file> ] ] ;
     stac:hasExtension "https://stac-extensions.github.io/themes/v1.0.0/schema.json" ;
     stac:version "1.0.0" ;
-    rec:themes [ thns:concepts [ :name "Syncline" ;
-                    thns:id "wiki::Syncline" ],
-                [ :name "Summer" ;
-                    thns:id "wiki::Summer" ] ;
-            thns:scheme "https://en.wikipedia.org" ],
-        [ thns:concepts [ :name "France" ;
-                    thns:id "geonames::3017382" ],
+    rec:themes [ thns:concepts [ :name "Auvergne-Rhône-Alpes" ;
+                    thns:id "geonames::11071625" ],
                 [ :name "Forêt de Saou" ;
                     thns:id "geonames::2976077" ],
-                [ :name "Auvergne-Rhône-Alpes" ;
-                    thns:id "geonames::11071625" ] ;
-            thns:scheme "https://www.geonames.org" ] .
+                [ :name "France" ;
+                    thns:id "geonames::3017382" ] ;
+            thns:scheme "https://www.geonames.org" ],
+        [ thns:concepts [ :name "Summer" ;
+                    thns:id "wiki::Summer" ],
+                [ :name "Syncline" ;
+                    thns:id "wiki::Syncline" ] ;
+            thns:scheme "https://en.wikipedia.org" ] .
 
 
 ```
