@@ -10,7 +10,7 @@
       "title": "Validation report for ogc.profiles.cc.tasl - TASL profile of DCAT",
       "bblockName": "TASL profile of DCAT",
       "bblockId": "ogc.profiles.cc.tasl",
-      "generated": "2025-12-13T03:47:48.084351+00:00",
+      "generated": "2025-12-16T03:50:46.747131+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -24,7 +24,7 @@
       "title": "Validation report for ogc.profiles.cc.taslar - TASLAR profile of DCAT/TASL",
       "bblockName": "TASLAR profile of DCAT/TASL",
       "bblockId": "ogc.profiles.cc.taslar",
-      "generated": "2025-12-13T03:47:48.087881+00:00",
+      "generated": "2025-12-16T03:50:46.751417+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -38,7 +38,7 @@
       "title": "Validation report for ogc.profiles.cc.tasl-json - Simple JSON properties for CC TASLAR profile",
       "bblockName": "Simple JSON properties for CC TASLAR profile",
       "bblockId": "ogc.profiles.cc.tasl-json",
-      "generated": "2025-12-13T03:47:48.196274+00:00",
+      "generated": "2025-12-16T03:50:46.799430+00:00",
       "result": true,
       "items": [
         {
@@ -59,7 +59,7 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using example_1_1.json from examples"
+                  "message": "Using example_1_1.json (example_1_1) from examples"
                 },
                 {
                   "op": "jsonld-uplift",
@@ -108,7 +108,7 @@
       "title": "Validation report for ogc.profiles.cc.stac.extensions.stac-taslar - STAC TASLAR Extension",
       "bblockName": "STAC TASLAR Extension",
       "bblockId": "ogc.profiles.cc.stac.extensions.stac-taslar",
-      "generated": "2025-12-13T03:47:50.525057+00:00",
+      "generated": "2025-12-16T03:50:49.313183+00:00",
       "result": true,
       "items": [
         {
@@ -130,7 +130,7 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using example_1_1.json from examples"
+                  "message": "Using example_1_1.json (example_1_1) from examples"
                 },
                 {
                   "op": "jsonld-uplift",
@@ -209,7 +209,7 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using example_2_1.json from examples"
+                  "message": "Using example_2_1.json (example_2_1) from examples"
                 },
                 {
                   "op": "jsonld-uplift",
@@ -281,7 +281,7 @@
       "title": "Validation report for ogc.profiles.cc.stac.extensions.geodcat-stac-tasl - GeoDCAT profile of STAC TASL extension",
       "bblockName": "GeoDCAT profile of STAC TASL extension",
       "bblockId": "ogc.profiles.cc.stac.extensions.geodcat-stac-tasl",
-      "generated": "2025-12-13T03:47:51.582765+00:00",
+      "generated": "2025-12-16T03:50:50.838657+00:00",
       "result": true,
       "items": [
         {
@@ -303,7 +303,7 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using example_1_1.json from examples"
+                  "message": "Using example_1_1.json (example_1_1) from examples"
                 },
                 {
                   "op": "jsonld-uplift",
