@@ -83,7 +83,6 @@ Links to the schema:
     },
     "author": "dct:author",
     "license": "dcat:license",
-    "source": {},
     "dct": "http://purl.org/dc/terms/",
     "@version": 1.1
   }

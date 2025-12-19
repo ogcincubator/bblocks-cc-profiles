@@ -250,14 +250,19 @@ Placeholder for a STAC TASLAR extension - defines
             :temporal [ :interval "2015-06-23T00:00:00Z" ] ] ;
     dcterms:format "Collection" ;
     dcterms:title "A title" ;
-    rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            oa:hasTarget <https://example.com/examples/collection.json> ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/item> ;
-            oa:hasTarget <https://example.com/examples/item.json> ] ;
+    rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/item> ;
+            oa:hasTarget <https://example.com/examples/item.json> ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            oa:hasTarget <https://example.com/examples/collection.json> ] ;
     dcat:license "Apache-2.0" ;
     stac:hasExtension "https://stac-extensions.github.io/themes/v1.0.0/schema.json" ;
     stac:version "1.0.0" ;
-    rec:themes [ thns:concepts <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_brewer>,
+    rec:themes [ thns:concepts <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_atmosphericComposition>,
+                <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_observationPlatform>,
+                <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_pollution>,
+                <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_rocketSounding> ;
+            thns:scheme "https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode" ],
+        [ thns:concepts <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_brewer>,
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_dobson>,
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_filter>,
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_hoelper>,
@@ -266,12 +271,7 @@ Placeholder for a STAC TASLAR extension - defines
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_saoz>,
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_spectral>,
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_vassey> ;
-            thns:scheme "https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode" ],
-        [ thns:concepts <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_atmosphericComposition>,
-                <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_observationPlatform>,
-                <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_pollution>,
-                <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_rocketSounding> ;
-            thns:scheme "https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode" ] .
+            thns:scheme "https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode" ] .
 
 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_brewer> thns:id "brewer" .
 
@@ -530,18 +530,18 @@ Placeholder for a STAC TASLAR extension - defines
                     oa:hasTarget <https://example.com/stac/themes/example-2/example.file> ] ] ;
     stac:hasExtension "https://stac-extensions.github.io/themes/v1.0.0/schema.json" ;
     stac:version "1.0.0" ;
-    rec:themes [ thns:concepts [ :name "France" ;
+    rec:themes [ thns:concepts [ :name "Syncline" ;
+                    thns:id "wiki::Syncline" ],
+                [ :name "Summer" ;
+                    thns:id "wiki::Summer" ] ;
+            thns:scheme "https://en.wikipedia.org" ],
+        [ thns:concepts [ :name "France" ;
                     thns:id "geonames::3017382" ],
-                [ :name "Auvergne-Rhône-Alpes" ;
-                    thns:id "geonames::11071625" ],
                 [ :name "Forêt de Saou" ;
-                    thns:id "geonames::2976077" ] ;
-            thns:scheme "https://www.geonames.org" ],
-        [ thns:concepts [ :name "Summer" ;
-                    thns:id "wiki::Summer" ],
-                [ :name "Syncline" ;
-                    thns:id "wiki::Syncline" ] ;
-            thns:scheme "https://en.wikipedia.org" ] .
+                    thns:id "geonames::2976077" ],
+                [ :name "Auvergne-Rhône-Alpes" ;
+                    thns:id "geonames::11071625" ] ;
+            thns:scheme "https://www.geonames.org" ] .
 
 
 ```
@@ -590,17 +590,7 @@ Links to the schema:
     "stac_extensions": "stac:hasExtension",
     "type": "dct:format",
     "id": "@id",
-    "extent": {
-      "@context": {
-        "spatial": {},
-        "temporal": {
-          "@context": {
-            "interval": {}
-          }
-        }
-      },
-      "@id": "dct:extent"
-    },
+    "extent": "dct:extent",
     "item_assets": {
       "@context": {
         "type": "@type"
@@ -615,22 +605,12 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id"
         },
-        "anchor": {},
         "type": "dct:type",
         "hreflang": "dct:language",
         "title": "rdfs:label",
-        "length": "dct:extent",
-        "method": {},
-        "headers": {},
-        "body": {}
+        "length": "dct:extent"
       },
       "@id": "rdfs:seeAlso"
-    },
-    "summaries": {
-      "@context": {
-        "minimum": {},
-        "maximum": {}
-      }
     },
     "title": {
       "@id": "dct:title",
@@ -648,44 +628,22 @@ Links to the schema:
       "@id": "stac:roles",
       "@container": "@set"
     },
-    "bands": {
-      "@context": {
-        "name": {}
-      }
-    },
     "datetime": {
       "@id": "dct:date",
       "@type": "xsd:dateTime"
     },
-    "start_datetime": {},
-    "end_datetime": {},
+    "start_datetime": {
+      "@id": "stac:start_datetime",
+      "@type": "xsd:dateTime"
+    },
+    "end_datetime": {
+      "@id": "stac:end_datetime",
+      "@type": "xsd:dateTime"
+    },
     "created": "dct:created",
     "updated": "dct:modified",
-    "data_type": {},
-    "nodata": {},
-    "statistics": {
-      "@context": {
-        "minimum": {},
-        "maximum": {},
-        "mean": {},
-        "stddev": {},
-        "count": {},
-        "valid_percent": {}
-      }
-    },
-    "unit": {},
-    "platform": {},
-    "instruments": {},
-    "constellation": {},
-    "mission": {},
-    "gsd": {},
     "license": "dcat:license",
-    "providers": {
-      "@context": {
-        "name": {},
-        "url": {}
-      }
-    },
+    "providers": "stac:hasProvider",
     "@vocab": "https://w3id.org/ogc/stac/assets/",
     "assets": {
       "@id": "stac:hasAsset",
@@ -713,8 +671,7 @@ Links to the schema:
         "coordinates": {
           "@container": "@list",
           "@id": "geojson:coordinates"
-        },
-        "geometries": {}
+        }
       },
       "@id": "geojson:geometry"
     },
@@ -727,15 +684,7 @@ Links to the schema:
       "@id": "dct:conformsTo",
       "@type": "@id"
     },
-    "time": {
-      "@context": {
-        "date": {},
-        "timestamp": {},
-        "interval": {},
-        "resolution": {}
-      },
-      "@id": "dct:temporal"
-    },
+    "time": "dct:temporal",
     "linkTemplates": {
       "@context": {
         "rel": {
@@ -761,33 +710,12 @@ Links to the schema:
       },
       "@id": "rec:hasLinkTemplate"
     },
-    "collection": {},
-    "language": {
-      "@context": {
-        "code": {},
-        "name": {},
-        "alternate": {},
-        "dir": {}
-      },
-      "@id": "rec:language"
-    },
+    "language": "rec:language",
     "languages": {
-      "@context": {
-        "code": {},
-        "name": {},
-        "alternate": {},
-        "dir": {}
-      },
       "@container": "@set",
       "@id": "rec:languages"
     },
     "resourceLanguages": {
-      "@context": {
-        "code": {},
-        "name": {},
-        "alternate": {},
-        "dir": {}
-      },
       "@container": "@set",
       "@id": "rec:resourceLanguages"
     },
@@ -824,10 +752,6 @@ Links to the schema:
     },
     "contacts": {
       "@context": {
-        "identifier": {},
-        "name": {},
-        "position": {},
-        "organization": {},
         "logo": {
           "@context": {
             "rel": {
@@ -837,34 +761,12 @@ Links to the schema:
               "@id": "http://www.iana.org/assignments/relation",
               "@type": "@id"
             },
-            "anchor": {},
             "type": "dct:type",
             "hreflang": "dct:language",
             "title": "rdfs:label",
             "length": "dct:extent"
           }
-        },
-        "phones": {
-          "@context": {
-            "value": {}
-          }
-        },
-        "emails": {
-          "@context": {
-            "value": {}
-          }
-        },
-        "addresses": {
-          "@context": {
-            "deliveryPoint": {},
-            "city": {},
-            "administrativeArea": {},
-            "postalCode": {},
-            "country": {}
-          }
-        },
-        "hoursOfService": {},
-        "contactInstructions": {}
+        }
       },
       "@container": "@set",
       "@id": "dcat:contactPoint",
@@ -872,7 +774,6 @@ Links to the schema:
     },
     "rights": "dcat:rights",
     "author": "dct:author",
-    "source": {},
     "concepts": {
       "@id": "thns:concepts",
       "@container": "@set",
