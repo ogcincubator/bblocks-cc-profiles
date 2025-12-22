@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.profiles.cc.stac.extensions.stac-taslar - STAC TASLAR Extension",
   "bblockName": "STAC TASLAR Extension",
   "bblockId": "ogc.profiles.cc.stac.extensions.stac-taslar",
-  "generated": "2025-12-19T03:50:13.623234+00:00",
+  "generated": "2025-12-22T03:56:31.194102+00:00",
   "result": true,
   "items": [
     {
@@ -24,7 +24,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_1_1.json (example_1_1) from examples"
+              "message": "Using example_1_1.json from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -41,7 +41,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 57,
+              "size": 43,
               "isError": false,
               "message": "Output Turtle example_1_1.ttl created"
             }
@@ -103,7 +103,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_2_1.json (example_2_1) from examples"
+              "message": "Using example_2_1.json from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -120,7 +120,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_2_1.ttl",
-              "size": 86,
+              "size": 78,
               "isError": false,
               "message": "Output Turtle example_2_1.ttl created"
             }
