@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.profiles.cc.stac.extensions.geodcat-stac-tasl - GeoDCAT profile of STAC TASL extension",
   "bblockName": "GeoDCAT profile of STAC TASL extension",
   "bblockId": "ogc.profiles.cc.stac.extensions.geodcat-stac-tasl",
-  "generated": "2025-12-22T03:56:33.235441+00:00",
+  "generated": "2025-12-25T03:52:15.889925+00:00",
   "result": true,
   "items": [
     {
@@ -41,7 +41,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 59,
+              "size": 25,
               "isError": false,
               "message": "Output Turtle example_1_1.ttl created"
             }

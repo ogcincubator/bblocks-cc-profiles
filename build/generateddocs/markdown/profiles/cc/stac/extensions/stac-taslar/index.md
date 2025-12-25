@@ -245,19 +245,14 @@ Placeholder for a STAC TASLAR extension - defines
     dcterms:description "A description" ;
     dcterms:extent [ ] ;
     dcterms:title "A title" ;
-    rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/self> ;
+    rdfs:seeAlso [ ns1:relation "self" ;
             oa:hasTarget <https://example.com/examples/collection.json> ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/item> ;
+        [ ns1:relation "item" ;
             oa:hasTarget <https://example.com/examples/item.json> ] ;
     dcat:license "Apache-2.0" ;
     stac:hasExtension "https://stac-extensions.github.io/themes/v1.0.0/schema.json" ;
     stac:version "1.0.0" ;
-    rec:themes [ thns:concepts <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_atmosphericComposition>,
-                <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_observationPlatform>,
-                <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_pollution>,
-                <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_rocketSounding> ;
-            thns:scheme "https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode" ],
-        [ thns:concepts <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_brewer>,
+    rec:themes [ thns:concepts <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_brewer>,
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_dobson>,
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_filter>,
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_hoelper>,
@@ -266,7 +261,12 @@ Placeholder for a STAC TASLAR extension - defines
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_saoz>,
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_spectral>,
                 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_vassey> ;
-            thns:scheme "https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode" ] .
+            thns:scheme "https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode" ],
+        [ thns:concepts <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_atmosphericComposition>,
+                <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_observationPlatform>,
+                <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_pollution>,
+                <https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_rocketSounding> ;
+            thns:scheme "https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode" ] .
 
 <https://geo.woudc.org/codelists.xml#WOUDC_InstrumentCode_brewer> thns:id "brewer" .
 
@@ -506,7 +506,6 @@ Placeholder for a STAC TASLAR extension - defines
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix ns1: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rec: <https://www.opengis.net/def/ogc-api/records/> .
 @prefix stac: <https://w3id.org/ogc/stac/core/> .
@@ -514,12 +513,20 @@ Placeholder for a STAC TASLAR extension - defines
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://example.com/stac/themes/example-2/example> a geojson:Feature ;
-    dcterms:date "2022-06-16T10:36:31.024000+00:00"^^xsd:dateTime ;
-    rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/self> ;
+    dcterms:date "2022-06-16T10:36:31.024Z" ;
+    rdfs:seeAlso [ ns1:relation "self" ;
             oa:hasTarget <https://example.com/examples/item.json> ] ;
-    geojson:bbox ( 1.729e+02 1.3e+00 173 1.4e+00 ) ;
+    geojson:bbox 1.3e+00,
+        1.4e+00,
+        1.729e+02,
+        173 ;
     geojson:geometry [ a geojson:Polygon ;
-            geojson:coordinates ( ( ( 5.6287e+00 4.42673e+01 ) ( 5.5996e+00 4.41958e+01 ) ( 5.57633e+00 4.413603e+01 ) ( 4.25061e+00 4.415852e+01 ) ( 4.27204e+00 4.514675e+01 ) ( 5.66762e+00 4.512267e+01 ) ( 5.6287e+00 4.42673e+01 ) ) ) ] ;
+            geojson:coordinates "[4.25061, 44.15852]",
+                "[4.27204, 45.14675]",
+                "[5.57633, 44.13603]",
+                "[5.5996, 44.1958]",
+                "[5.6287, 44.2673]",
+                "[5.66762, 45.12267]" ] ;
     stac:hasAsset [ ] ;
     stac:hasExtension "https://stac-extensions.github.io/themes/v1.0.0/schema.json" ;
     stac:version "1.0.0" ;
@@ -581,44 +588,21 @@ Links to the schema:
     "extent": "dct:extent",
     "links": {
       "@context": {
-        "rel": {
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          },
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id"
-        },
+        "rel": "http://www.iana.org/assignments/relation",
         "type": "dct:type",
-        "hreflang": "dct:language",
-        "title": "rdfs:label",
-        "length": "dct:extent"
+        "title": "rdfs:label"
       },
       "@id": "rdfs:seeAlso"
     },
     "title": {
-      "@id": "dct:title",
-      "@container": "@set"
+      "@container": "@set",
+      "@id": "dct:title"
     },
-    "description": {
-      "@id": "dct:description",
-      "@container": "@set"
-    },
-    "keywords": {
-      "@id": "dcat:keyword",
-      "@container": "@set"
-    },
-    "datetime": {
-      "@id": "dct:date",
-      "@type": "xsd:dateTime"
-    },
-    "start_datetime": {
-      "@id": "stac:start_datetime",
-      "@type": "xsd:dateTime"
-    },
-    "end_datetime": {
-      "@id": "stac:end_datetime",
-      "@type": "xsd:dateTime"
-    },
+    "description": "dct:description",
+    "keywords": "dcat:keyword",
+    "datetime": "dct:date",
+    "start_datetime": "stac:start_datetime",
+    "end_datetime": "stac:end_datetime",
     "created": "dct:created",
     "updated": "dct:modified",
     "license": "dcat:license",
@@ -626,13 +610,9 @@ Links to the schema:
     "assets": {
       "@context": {
         "type": "dct:format",
-        "roles": {
-          "@id": "stac:roles",
-          "@container": "@set"
-        }
+        "roles": "stac:roles"
       },
-      "@id": "stac:hasAsset",
-      "@container": "@set"
+      "@id": "stac:hasAsset"
     },
     "stac_version": "stac:version",
     "media_type": "dct:format",
@@ -652,17 +632,11 @@ Links to the schema:
     "properties": "@nest",
     "geometry": {
       "@context": {
-        "coordinates": {
-          "@container": "@list",
-          "@id": "geojson:coordinates"
-        }
+        "coordinates": "geojson:coordinates"
       },
       "@id": "geojson:geometry"
     },
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
-    },
+    "bbox": "geojson:bbox",
     "conformsTo": {
       "@container": "@set",
       "@id": "dct:conformsTo",
@@ -738,6 +712,15 @@ Links to the schema:
     "contacts": {
       "@context": {
         "logo": {
+          "@context": {
+            "rel": "http://www.iana.org/assignments/relation",
+            "type": "dct:type",
+            "hreflang": "dct:language",
+            "title": "rdfs:label",
+            "length": "dct:extent"
+          }
+        },
+        "links": {
           "@context": {
             "rel": {
               "@context": {

@@ -6,44 +6,21 @@
     "extent": "dct:extent",
     "links": {
       "@context": {
-        "rel": {
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          },
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id"
-        },
+        "rel": "http://www.iana.org/assignments/relation",
         "type": "dct:type",
-        "hreflang": "dct:language",
-        "title": "rdfs:label",
-        "length": "dct:extent"
+        "title": "rdfs:label"
       },
       "@id": "rdfs:seeAlso"
     },
     "title": {
-      "@id": "dct:title",
-      "@container": "@set"
+      "@container": "@set",
+      "@id": "dct:title"
     },
-    "description": {
-      "@id": "dct:description",
-      "@container": "@set"
-    },
-    "keywords": {
-      "@id": "dcat:keyword",
-      "@container": "@set"
-    },
-    "datetime": {
-      "@id": "dct:date",
-      "@type": "xsd:dateTime"
-    },
-    "start_datetime": {
-      "@id": "stac:start_datetime",
-      "@type": "xsd:dateTime"
-    },
-    "end_datetime": {
-      "@id": "stac:end_datetime",
-      "@type": "xsd:dateTime"
-    },
+    "description": "dct:description",
+    "keywords": "dcat:keyword",
+    "datetime": "dct:date",
+    "start_datetime": "stac:start_datetime",
+    "end_datetime": "stac:end_datetime",
     "created": "dct:created",
     "updated": "dct:modified",
     "license": "dcat:license",
@@ -51,13 +28,9 @@
     "assets": {
       "@context": {
         "type": "dct:format",
-        "roles": {
-          "@id": "stac:roles",
-          "@container": "@set"
-        }
+        "roles": "stac:roles"
       },
-      "@id": "stac:hasAsset",
-      "@container": "@set"
+      "@id": "stac:hasAsset"
     },
     "stac_version": "stac:version",
     "media_type": "dct:format",
@@ -77,17 +50,11 @@
     "properties": "@nest",
     "geometry": {
       "@context": {
-        "coordinates": {
-          "@container": "@list",
-          "@id": "geojson:coordinates"
-        }
+        "coordinates": "geojson:coordinates"
       },
       "@id": "geojson:geometry"
     },
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
-    },
+    "bbox": "geojson:bbox",
     "conformsTo": {
       "@container": "@set",
       "@id": "dct:conformsTo",
@@ -163,6 +130,15 @@
     "contacts": {
       "@context": {
         "logo": {
+          "@context": {
+            "rel": "http://www.iana.org/assignments/relation",
+            "type": "dct:type",
+            "hreflang": "dct:language",
+            "title": "rdfs:label",
+            "length": "dct:extent"
+          }
+        },
+        "links": {
           "@context": {
             "rel": {
               "@context": {
