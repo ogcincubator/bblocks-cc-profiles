@@ -14,18 +14,18 @@
 
 <https://ogcincubator.github.io/bblocks-cc-profiles/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:Nfe8340cd60124c588a1d846aa296836e ;
+    prov:wasAttributedTo _:Nc5787c35db204a2990360ee096265b37 ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2025-12-25T03:52:15.978623"^^xsd:dateTime ;
-            prov:startedAtTime "2025-12-25T03:52:15.905213"^^xsd:dateTime ;
+            prov:endedAtTime "2025-12-28T03:59:44.923800"^^xsd:dateTime ;
+            prov:startedAtTime "2025-12-28T03:59:44.850691"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
                     dct:format "application/json" ;
-                    dct:hasVersion "git:5429b6c0f6029da7f025057511aa50b6c4deedc6" ;
+                    dct:hasVersion "git:00c09a9273359f4f2907d01013c79a5a79a95caf" ;
                     rdfs:seeAlso <https://ogcincubator.github.io/bblocks-cc-profiles/build/register.json> ],
                 [ a prov:Entity ;
                     dct:format "application/yaml" ;
                     rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
-            prov:wasAssociatedWith _:Nfe8340cd60124c588a1d846aa296836e ] .
+            prov:wasAssociatedWith _:Nc5787c35db204a2990360ee096265b37 ] .
 
 <bblocks://ogc.profiles.cc.stac.extensions.geodcat-stac-tasl> a skos:Concept,
         dcat:Dataset,
@@ -33,14 +33,14 @@
     rdfs:label "GeoDCAT profile of STAC TASL extension" ;
     dct:abstract "Defines a STAC extension for implementing the TASL profile"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/json-full/profiles/cc/stac/extensions/geodcat-stac-tasl/index.json> ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.stac.extensions.geodcat-stac-tasl> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/markdown/profiles/cc/stac/extensions/geodcat-stac-tasl/index.md> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.stac.extensions.geodcat-stac-tasl> ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/json-full/profiles/cc/stac/extensions/geodcat-stac-tasl/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-12-22"^^xsd:date ;
+    dct:modified "2025-12-25"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cc-profiles/> ;
     skos:prefLabel "GeoDCAT profile of STAC TASL extension" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-cc-profiles/> ;
@@ -49,23 +49,23 @@
         "STAC",
         "TASL",
         "profile" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo shacl: ;
+    prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.api.records.v1.schemas.linkTemplate> ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl> ;
             prof:hasRole role:validation ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/context.jsonld> ;
-            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/schema.yaml> ;
+            prof:hasRole role:schema ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/schema.json> ;
-            prof:hasRole role:schema ] ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
     bblocks:dependsOn <bblocks://ogc.contrib.stac.extensions.accuracy>,
         <bblocks://ogc.geo.geodcat.stac.geodcat-stac-collection>,
         <bblocks://ogc.geo.geodcat.stac.geodcat-stac-item> ;
@@ -87,7 +87,7 @@
         [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.stac.extensions.stac-taslar> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-12-22"^^xsd:date ;
+    dct:modified "2025-12-25"^^xsd:date ;
     dct:source <https://github.com/stac-extensions/themes> ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cc-profiles/> ;
     skos:prefLabel "STAC TASLAR Extension" ;
@@ -95,19 +95,19 @@
     dcat:keyword "stac",
         "stac-extension",
         "themes" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/stac-taslar/schema.json> ;
-            prof:hasRole role:schema ],
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/stac-taslar/context.jsonld> ;
+            prof:hasRole role:mapping ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.api.records.v1.schemas.linkTemplate> ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl> ;
             prof:hasRole role:validation ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/stac-taslar/context.jsonld> ;
-            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/stac-taslar/schema.json> ;
+            prof:hasRole role:schema ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/stac-taslar/schema.yaml> ;
@@ -130,14 +130,14 @@
     rdfs:label "TASL profile of DCAT" ;
     dct:abstract "Provides a CI/CT/CD environment for the TASL profile definition."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.tasl> ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/json-full/profiles/cc/tasl/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/markdown/profiles/cc/tasl/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/markdown/profiles/cc/tasl/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.tasl> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-12-22"^^xsd:date ;
+    dct:modified "2025-12-25"^^xsd:date ;
     dct:source <https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution> ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cc-profiles/> ;
     skos:prefLabel "TASL profile of DCAT" ;
@@ -156,14 +156,14 @@
     rdfs:label "Simple JSON properties for CC TASLAR profile" ;
     dct:abstract "A set of properties that can be added to any object enforcing TASLAR "^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-12-08T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/markdown/profiles/cc/tasl-json/index.md> ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.tasl-json> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/json-full/profiles/cc/tasl-json/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/markdown/profiles/cc/tasl-json/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/json-full/profiles/cc/tasl-json/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-12-22"^^xsd:date ;
+    dct:modified "2025-12-25"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cc-profiles/> ;
     skos:prefLabel "Simple JSON properties for CC TASLAR profile" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-cc-profiles/> ;
@@ -172,14 +172,14 @@
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/tasl-json/schema.json> ;
             prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/tasl-json/schema.yaml> ;
-            prof:hasRole role:schema ],
         [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/tasl-json/context.jsonld> ;
-            prof:hasRole role:mapping ] ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/tasl-json/schema.yaml> ;
+            prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.ogc-utils.iri-or-curie>,
         <bblocks://ogc.profiles.cc.taslar> ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-cc-profiles/_sources/tasl-json/context.jsonld> ;
@@ -193,14 +193,14 @@
     rdfs:label "TASLAR profile of DCAT/TASL" ;
     dct:abstract "TASLAR extended profile definition."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.taslar> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/markdown/profiles/cc/taslar/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-cc-profiles/bblock/ogc.profiles.cc.taslar> ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-cc-profiles/build/generateddocs/json-full/profiles/cc/taslar/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-12-22"^^xsd:date ;
+    dct:modified "2025-12-25"^^xsd:date ;
     dct:source <https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution> ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cc-profiles/> ;
     skos:prefLabel "TASLAR profile of DCAT/TASL" ;
@@ -223,7 +223,7 @@
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:description """TASL is described [here](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:modified "2025-12-25T03:52:02.616039"^^xsd:dateTime ;
+    dct:modified "2025-12-28T03:59:30.670244"^^xsd:dateTime ;
     owl:imports <https://ogcincubator.github.io/geodcat-ogcapi-records/build/register.json>,
         <https://opengeospatial.github.io/bblocks/register.json> ;
     skos:hasTopConcept <bblocks://ogc.profiles.cc.stac.extensions.geodcat-stac-tasl>,
@@ -235,7 +235,7 @@
     foaf:homepage <https://ogcincubator.github.io/bblocks-cc-profiles/> ;
     bblocks:hasValidationReport <https://ogcincubator.github.io/bblocks-cc-profiles/build/tests/report.html> .
 
-_:Nfe8340cd60124c588a1d846aa296836e a prov:Agent,
+_:Nc5787c35db204a2990360ee096265b37 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
     dct:hasVersion "0.5.10" ;
