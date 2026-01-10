@@ -245,10 +245,10 @@ Placeholder for a STAC TASLAR extension - defines
     dcterms:description "A description" ;
     dcterms:extent [ ] ;
     dcterms:title "A title" ;
-    rdfs:seeAlso [ ns1:relation "self" ;
-            oa:hasTarget <https://example.com/examples/collection.json> ],
-        [ ns1:relation "item" ;
-            oa:hasTarget <https://example.com/examples/item.json> ] ;
+    rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/item> ;
+            oa:hasTarget <https://example.com/examples/item.json> ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            oa:hasTarget <https://example.com/examples/collection.json> ] ;
     dcat:license "Apache-2.0" ;
     stac:hasExtension "https://stac-extensions.github.io/themes/v1.0.0/schema.json" ;
     stac:version "1.0.0" ;
@@ -506,6 +506,7 @@ Placeholder for a STAC TASLAR extension - defines
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix ns1: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rec: <https://www.opengis.net/def/ogc-api/records/> .
 @prefix stac: <https://w3id.org/ogc/stac/core/> .
@@ -513,29 +514,21 @@ Placeholder for a STAC TASLAR extension - defines
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://example.com/stac/themes/example-2/example> a geojson:Feature ;
-    dcterms:date "2022-06-16T10:36:31.024Z" ;
-    rdfs:seeAlso [ ns1:relation "self" ;
+    dcterms:date "2022-06-16T10:36:31.024000+00:00"^^xsd:dateTime ;
+    rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/self> ;
             oa:hasTarget <https://example.com/examples/item.json> ] ;
-    geojson:bbox 1.3e+00,
-        1.4e+00,
-        1.729e+02,
-        173 ;
+    geojson:bbox ( 1.729e+02 1.3e+00 173 1.4e+00 ) ;
     geojson:geometry [ a geojson:Polygon ;
-            geojson:coordinates "[4.25061, 44.15852]",
-                "[4.27204, 45.14675]",
-                "[5.57633, 44.13603]",
-                "[5.5996, 44.1958]",
-                "[5.6287, 44.2673]",
-                "[5.66762, 45.12267]" ] ;
+            geojson:coordinates ( ( ( 5.6287e+00 4.42673e+01 ) ( 5.5996e+00 4.41958e+01 ) ( 5.57633e+00 4.413603e+01 ) ( 4.25061e+00 4.415852e+01 ) ( 4.27204e+00 4.514675e+01 ) ( 5.66762e+00 4.512267e+01 ) ( 5.6287e+00 4.42673e+01 ) ) ) ] ;
     stac:hasAsset [ ] ;
     stac:hasExtension "https://stac-extensions.github.io/themes/v1.0.0/schema.json" ;
     stac:version "1.0.0" ;
     rec:themes [ thns:concepts [ thns:id "wiki::Syncline" ],
                 [ thns:id "wiki::Summer" ] ;
             thns:scheme "https://en.wikipedia.org" ],
-        [ thns:concepts [ thns:id "geonames::2976077" ],
-                [ thns:id "geonames::11071625" ],
-                [ thns:id "geonames::3017382" ] ;
+        [ thns:concepts [ thns:id "geonames::11071625" ],
+                [ thns:id "geonames::3017382" ],
+                [ thns:id "geonames::2976077" ] ;
             thns:scheme "https://www.geonames.org" ] .
 
 
@@ -588,21 +581,44 @@ Links to the schema:
     "extent": "dct:extent",
     "links": {
       "@context": {
-        "rel": "http://www.iana.org/assignments/relation",
+        "rel": {
+          "@context": {
+            "@base": "http://www.iana.org/assignments/relation/"
+          },
+          "@id": "http://www.iana.org/assignments/relation",
+          "@type": "@id"
+        },
         "type": "dct:type",
-        "title": "rdfs:label"
+        "hreflang": "dct:language",
+        "title": "rdfs:label",
+        "length": "dct:extent"
       },
       "@id": "rdfs:seeAlso"
     },
     "title": {
-      "@container": "@set",
-      "@id": "dct:title"
+      "@id": "dct:title",
+      "@container": "@set"
     },
-    "description": "dct:description",
-    "keywords": "dcat:keyword",
-    "datetime": "dct:date",
-    "start_datetime": "stac:start_datetime",
-    "end_datetime": "stac:end_datetime",
+    "description": {
+      "@id": "dct:description",
+      "@container": "@set"
+    },
+    "keywords": {
+      "@id": "dcat:keyword",
+      "@container": "@set"
+    },
+    "datetime": {
+      "@id": "dct:date",
+      "@type": "xsd:dateTime"
+    },
+    "start_datetime": {
+      "@id": "stac:start_datetime",
+      "@type": "xsd:dateTime"
+    },
+    "end_datetime": {
+      "@id": "stac:end_datetime",
+      "@type": "xsd:dateTime"
+    },
     "created": "dct:created",
     "updated": "dct:modified",
     "license": "dcat:license",
@@ -610,9 +626,13 @@ Links to the schema:
     "assets": {
       "@context": {
         "type": "dct:format",
-        "roles": "stac:roles"
+        "roles": {
+          "@id": "stac:roles",
+          "@container": "@set"
+        }
       },
-      "@id": "stac:hasAsset"
+      "@id": "stac:hasAsset",
+      "@container": "@set"
     },
     "stac_version": "stac:version",
     "media_type": "dct:format",
@@ -632,11 +652,17 @@ Links to the schema:
     "properties": "@nest",
     "geometry": {
       "@context": {
-        "coordinates": "geojson:coordinates"
+        "coordinates": {
+          "@container": "@list",
+          "@id": "geojson:coordinates"
+        }
       },
       "@id": "geojson:geometry"
     },
-    "bbox": "geojson:bbox",
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
+    },
     "conformsTo": {
       "@container": "@set",
       "@id": "dct:conformsTo",
@@ -710,32 +736,6 @@ Links to the schema:
       "@type": "@id"
     },
     "contacts": {
-      "@context": {
-        "logo": {
-          "@context": {
-            "rel": "http://www.iana.org/assignments/relation",
-            "type": "dct:type",
-            "hreflang": "dct:language",
-            "title": "rdfs:label",
-            "length": "dct:extent"
-          }
-        },
-        "links": {
-          "@context": {
-            "rel": {
-              "@context": {
-                "@base": "http://www.iana.org/assignments/relation/"
-              },
-              "@id": "http://www.iana.org/assignments/relation",
-              "@type": "@id"
-            },
-            "type": "dct:type",
-            "hreflang": "dct:language",
-            "title": "rdfs:label",
-            "length": "dct:extent"
-          }
-        }
-      },
       "@container": "@set",
       "@id": "dcat:contactPoint",
       "@type": "@id"

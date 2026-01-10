@@ -154,6 +154,7 @@ Defines a STAC extension for implementing the TASL profile
 @prefix ns1: <accuracy:> .
 @prefix ns2: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix stac: <https://w3id.org/ogc/stac/core/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -169,15 +170,9 @@ Defines a STAC extension for implementing the TASL profile
     dcterms:date "2020-12-11T22:38:32+00:00"^^xsd:dateTime ;
     rdfs:seeAlso [ ns2:relation <http://www.iana.org/assignments/relation/self> ;
             oa:hasTarget <https://example.com/examples/item.json> ] ;
-    geojson:bbox 1.3e+00,
-        1.4e+00,
-        1.729e+02,
-        173 ;
+    geojson:bbox ( 1.729e+02 1.3e+00 173 1.4e+00 ) ;
     geojson:geometry [ a geojson:Polygon ;
-            geojson:coordinates "[172.9, 1.3]",
-                "[172.9, 1.4]",
-                "[173, 1.3]",
-                "[173, 1.4]" ] ;
+            geojson:coordinates ( ( ( 1.729e+02 1.3e+00 ) ( 173 1.3e+00 ) ( 173 1.4e+00 ) ( 1.729e+02 1.4e+00 ) ( 1.729e+02 1.3e+00 ) ) ) ] ;
     stac:hasAsset [ ] ;
     stac:hasExtension "https://stac-extensions.github.io/accuracy/v1.0.0-beta.1/schema.json" ;
     stac:version "1.0.0" .
@@ -230,9 +225,18 @@ Links to the schema:
       },
       "@id": "rdfs:seeAlso"
     },
-    "title": "dct:title",
-    "description": "dct:description",
-    "keywords": "dct:subject",
+    "title": {
+      "@id": "dct:title",
+      "@container": "@set"
+    },
+    "description": {
+      "@id": "dct:description",
+      "@container": "@set"
+    },
+    "keywords": {
+      "@id": "dct:subject",
+      "@container": "@set"
+    },
     "datetime": {
       "@id": "dct:date",
       "@type": "xsd:dateTime"
@@ -250,6 +254,13 @@ Links to the schema:
     "license": "dct:license",
     "providers": "stac:hasProvider",
     "assets": {
+      "@context": {
+        "type": "dct:format",
+        "roles": {
+          "@id": "stac:roles",
+          "@container": "@set"
+        }
+      },
       "@id": "stac:hasAsset",
       "@container": "@set"
     },
@@ -271,11 +282,17 @@ Links to the schema:
     "properties": "@nest",
     "geometry": {
       "@context": {
-        "coordinates": "geojson:coordinates"
+        "coordinates": {
+          "@container": "@list",
+          "@id": "geojson:coordinates"
+        }
       },
       "@id": "geojson:geometry"
     },
-    "bbox": "geojson:bbox",
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
+    },
     "conformsTo": {
       "@container": "@set",
       "@id": "dct:conformsTo",
@@ -343,8 +360,14 @@ Links to the schema:
       "@context": {
         "concepts": {
           "@context": {
-            "id": "thns:id",
-            "url": "@id"
+            "id": {
+              "@id": "thns:id",
+              "@type": "xsd:string"
+            },
+            "url": {
+              "@id": "@id",
+              "@type": "@id"
+            }
           },
           "@id": "thns:concepts",
           "@container": "@set"
@@ -364,21 +387,11 @@ Links to the schema:
       "@type": "@id"
     },
     "contacts": {
-      "@context": {
-        "logo": {
-          "@context": {
-            "rel": "http://www.iana.org/assignments/relation",
-            "type": "dct:type",
-            "hreflang": "dct:language",
-            "title": "rdfs:label",
-            "length": "dct:extent"
-          }
-        }
-      },
       "@container": "@set",
       "@id": "dcat:contactPoint",
       "@type": "@id"
     },
+    "rights": "dcat:rights",
     "accessrights": "dct:accessRights",
     "variables": {
       "@container": "@id",
@@ -388,7 +401,6 @@ Links to the schema:
         "@vocab": "https://www.opengis.net/def/ogc-api/records/"
       }
     },
-    "rights": "dcat:rights",
     "href": {
       "@type": "@id",
       "@id": "oa:hasTarget"

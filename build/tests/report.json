@@ -10,7 +10,7 @@
       "title": "Validation report for ogc.profiles.cc.tasl - TASL profile of DCAT",
       "bblockName": "TASL profile of DCAT",
       "bblockId": "ogc.profiles.cc.tasl",
-      "generated": "2026-01-07T03:54:25.104339+00:00",
+      "generated": "2026-01-10T03:49:55.019552+00:00",
       "result": false,
       "items": [
         {
@@ -50,7 +50,7 @@
       "title": "Validation report for ogc.profiles.cc.taslar - TASLAR profile of DCAT/TASL",
       "bblockName": "TASLAR profile of DCAT/TASL",
       "bblockId": "ogc.profiles.cc.taslar",
-      "generated": "2026-01-07T03:54:25.108869+00:00",
+      "generated": "2026-01-10T03:49:55.024065+00:00",
       "result": false,
       "items": [
         {
@@ -90,7 +90,7 @@
       "title": "Validation report for ogc.profiles.cc.tasl-json - Simple JSON properties for CC TASLAR profile",
       "bblockName": "Simple JSON properties for CC TASLAR profile",
       "bblockId": "ogc.profiles.cc.tasl-json",
-      "generated": "2026-01-07T03:54:25.154117+00:00",
+      "generated": "2026-01-10T03:49:55.172826+00:00",
       "result": true,
       "items": [
         {
@@ -160,7 +160,7 @@
       "title": "Validation report for ogc.profiles.cc.stac.extensions.stac-taslar - STAC TASLAR Extension",
       "bblockName": "STAC TASLAR Extension",
       "bblockId": "ogc.profiles.cc.stac.extensions.stac-taslar",
-      "generated": "2026-01-07T03:54:27.089011+00:00",
+      "generated": "2026-01-10T03:49:59.033401+00:00",
       "result": true,
       "items": [
         {
@@ -278,7 +278,7 @@
                   "op": "ttl-create",
                   "empty": false,
                   "filename": "example_2_1.ttl",
-                  "size": 34,
+                  "size": 78,
                   "isError": false,
                   "message": "Output Turtle example_2_1.ttl created"
                 }
@@ -333,7 +333,7 @@
       "title": "Validation report for ogc.profiles.cc.stac.extensions.geodcat-stac-tasl - GeoDCAT profile of STAC TASL extension",
       "bblockName": "GeoDCAT profile of STAC TASL extension",
       "bblockId": "ogc.profiles.cc.stac.extensions.geodcat-stac-tasl",
-      "generated": "2026-01-07T03:54:28.961888+00:00",
+      "generated": "2026-01-10T03:50:02.040818+00:00",
       "result": true,
       "items": [
         {
@@ -372,7 +372,7 @@
                   "op": "ttl-create",
                   "empty": false,
                   "filename": "example_1_1.ttl",
-                  "size": 25,
+                  "size": 59,
                   "isError": false,
                   "message": "Output Turtle example_1_1.ttl created"
                 }
