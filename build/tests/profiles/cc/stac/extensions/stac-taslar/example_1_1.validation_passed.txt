@@ -1,5 +1,5 @@
 Validation report for ogc.profiles.cc.stac.extensions.stac-taslar - STAC TASLAR Extension
-Generated 2026-01-10T03:49:57.044867+00:00
+Generated 2026-01-13T03:54:24.612219+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
