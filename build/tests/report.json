@@ -1,17 +1,17 @@
 {
   "summary": {
     "total": 5,
-    "passed": 3,
-    "failed": 2,
-    "result": false
+    "passed": 5,
+    "failed": 0,
+    "result": true
   },
   "bblocks": {
     "ogc.profiles.cc.tasl": {
       "title": "Validation report for ogc.profiles.cc.tasl - TASL profile of DCAT",
       "bblockName": "TASL profile of DCAT",
       "bblockId": "ogc.profiles.cc.tasl",
-      "generated": "2026-01-19T04:02:02.435415+00:00",
-      "result": false,
+      "generated": "2026-01-22T04:00:28.078695+00:00",
+      "result": true,
       "items": [
         {
           "source": {
@@ -23,16 +23,15 @@
             "snippetIndex": 1,
             "language": "text/turtle"
           },
-          "result": false,
+          "result": true,
           "sections": [
             {
-              "name": "UNKNOWN",
-              "title": "Unknown errors",
+              "name": "FILES",
+              "title": "Files",
               "entries": [
                 {
-                  "exception": "FileNotFoundError",
-                  "isError": true,
-                  "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 198, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 316, in validate\n    graph = self._load_graph(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 291, in _load_graph\n    graph = Graph().parse(filename, format=rdf_format)\n,  File \"/venv/lib/python3.10/site-packages/rdflib/graph.py\", line 1470, in parse\n    source = create_input_source(\n,  File \"/venv/lib/python3.10/site-packages/rdflib/parser.py\", line 416, in create_input_source\n    ) = _create_input_source_from_location(\n,  File \"/venv/lib/python3.10/site-packages/rdflib/parser.py\", line 476, in _create_input_source_from_location\n    file = open(filename, \"rb\")\n,FileNotFoundError: [Errno 2] No such file or directory: '/github/workspace/_sources/tasl/example_1_1.ttl'\n"
+                  "isError": false,
+                  "message": "Using examples/tasl.ttl from examples"
                 }
               ]
             }
@@ -42,16 +41,16 @@
       "globalErrors": {},
       "counts": {
         "total": 1,
-        "passed": 0,
-        "failed": 1
+        "passed": 1,
+        "failed": 0
       }
     },
     "ogc.profiles.cc.taslar": {
       "title": "Validation report for ogc.profiles.cc.taslar - TASLAR profile of DCAT/TASL",
       "bblockName": "TASLAR profile of DCAT/TASL",
       "bblockId": "ogc.profiles.cc.taslar",
-      "generated": "2026-01-19T04:02:02.439703+00:00",
-      "result": false,
+      "generated": "2026-01-22T04:00:28.083250+00:00",
+      "result": true,
       "items": [
         {
           "source": {
@@ -63,16 +62,15 @@
             "snippetIndex": 1,
             "language": "text/turtle"
           },
-          "result": false,
+          "result": true,
           "sections": [
             {
-              "name": "UNKNOWN",
-              "title": "Unknown errors",
+              "name": "FILES",
+              "title": "Files",
               "entries": [
                 {
-                  "exception": "FileNotFoundError",
-                  "isError": true,
-                  "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 198, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 316, in validate\n    graph = self._load_graph(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 291, in _load_graph\n    graph = Graph().parse(filename, format=rdf_format)\n,  File \"/venv/lib/python3.10/site-packages/rdflib/graph.py\", line 1470, in parse\n    source = create_input_source(\n,  File \"/venv/lib/python3.10/site-packages/rdflib/parser.py\", line 416, in create_input_source\n    ) = _create_input_source_from_location(\n,  File \"/venv/lib/python3.10/site-packages/rdflib/parser.py\", line 476, in _create_input_source_from_location\n    file = open(filename, \"rb\")\n,FileNotFoundError: [Errno 2] No such file or directory: '/github/workspace/_sources/taslar/example_1_1.ttl'\n"
+                  "isError": false,
+                  "message": "Using examples/taslar.ttl from examples"
                 }
               ]
             }
@@ -82,15 +80,15 @@
       "globalErrors": {},
       "counts": {
         "total": 1,
-        "passed": 0,
-        "failed": 1
+        "passed": 1,
+        "failed": 0
       }
     },
     "ogc.profiles.cc.tasl-json": {
       "title": "Validation report for ogc.profiles.cc.tasl-json - Simple JSON properties for CC TASLAR profile",
       "bblockName": "Simple JSON properties for CC TASLAR profile",
       "bblockId": "ogc.profiles.cc.tasl-json",
-      "generated": "2026-01-19T04:02:02.519595+00:00",
+      "generated": "2026-01-22T04:00:28.172875+00:00",
       "result": true,
       "items": [
         {
@@ -160,7 +158,7 @@
       "title": "Validation report for ogc.profiles.cc.stac.extensions.stac-taslar - STAC TASLAR Extension",
       "bblockName": "STAC TASLAR Extension",
       "bblockId": "ogc.profiles.cc.stac.extensions.stac-taslar",
-      "generated": "2026-01-19T04:02:05.837538+00:00",
+      "generated": "2026-01-22T04:00:29.997032+00:00",
       "result": true,
       "items": [
         {
@@ -182,7 +180,7 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using example_1_1.json from examples"
+                  "message": "Using https://raw.githubusercontent.com/stac-extensions/themes/refs/heads/main/examples/collection.json from examples"
                 },
                 {
                   "op": "jsonld-uplift",
@@ -261,7 +259,7 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using example_2_1.json from examples"
+                  "message": "Using https://raw.githubusercontent.com/stac-extensions/themes/refs/heads/main/examples/item.json from examples"
                 },
                 {
                   "op": "jsonld-uplift",
@@ -333,7 +331,7 @@
       "title": "Validation report for ogc.profiles.cc.stac.extensions.geodcat-stac-tasl - GeoDCAT profile of STAC TASL extension",
       "bblockName": "GeoDCAT profile of STAC TASL extension",
       "bblockId": "ogc.profiles.cc.stac.extensions.geodcat-stac-tasl",
-      "generated": "2026-01-19T04:02:09.294431+00:00",
+      "generated": "2026-01-22T04:00:31.234047+00:00",
       "result": true,
       "items": [
         {
@@ -355,7 +353,7 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using example_1_1.json from examples"
+                  "message": "Using https://raw.githubusercontent.com/stac-extensions/accuracy/main/examples/item.json from examples"
                 },
                 {
                   "op": "jsonld-uplift",

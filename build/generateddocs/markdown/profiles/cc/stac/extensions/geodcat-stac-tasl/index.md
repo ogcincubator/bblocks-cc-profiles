@@ -225,34 +225,6 @@ Links to the schema:
       },
       "@id": "rdfs:seeAlso"
     },
-    "title": {
-      "@id": "dct:title",
-      "@container": "@set"
-    },
-    "description": {
-      "@id": "dct:description",
-      "@container": "@set"
-    },
-    "keywords": {
-      "@id": "dct:subject",
-      "@container": "@set"
-    },
-    "datetime": {
-      "@id": "dct:date",
-      "@type": "xsd:dateTime"
-    },
-    "start_datetime": {
-      "@id": "stac:start_datetime",
-      "@type": "xsd:dateTime"
-    },
-    "end_datetime": {
-      "@id": "stac:end_datetime",
-      "@type": "xsd:dateTime"
-    },
-    "created": "dct:created",
-    "updated": "dct:modified",
-    "license": "dct:license",
-    "providers": "stac:hasProvider",
     "assets": {
       "@context": {
         "type": "dct:format",
@@ -265,6 +237,24 @@ Links to the schema:
       "@container": "@set"
     },
     "stac_version": "stac:version",
+    "keywords": {
+      "@id": "dcat:keyword",
+      "@container": "@set"
+    },
+    "license": "dcat:license",
+    "datetime": {
+      "@id": "dct:date",
+      "@type": "xsd:dateTime"
+    },
+    "start_datetime": {
+      "@id": "stac:start_datetime",
+      "@type": "xsd:dateTime"
+    },
+    "end_datetime": {
+      "@id": "stac:end_datetime",
+      "@type": "xsd:dateTime"
+    },
+    "providers": "stac:hasProvider",
     "media_type": "dct:format",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
@@ -325,65 +315,75 @@ Links to the schema:
       },
       "@id": "rec:hasLinkTemplate"
     },
+    "title": {
+      "@id": "dct:title",
+      "@container": "@set"
+    },
+    "description": {
+      "@id": "dct:description",
+      "@container": "@set"
+    },
+    "created": "dct:created",
+    "updated": "dct:modified",
     "language": {
+      "@id": "rec:language",
       "@context": {
         "code": "rec:languageCode",
         "name": "skos:prefLabel"
-      },
-      "@id": "rec:language"
+      }
     },
     "languages": {
+      "@container": "@set",
+      "@id": "rec:languages",
       "@context": {
         "code": "rec:languageCode",
         "name": "skos:prefLabel"
-      },
-      "@container": "@set",
-      "@id": "rec:languages"
+      }
     },
     "resourceLanguages": {
+      "@container": "@set",
+      "@id": "rec:resourceLanguages",
       "@context": {
         "code": "rec:languageCode",
         "name": "skos:prefLabel"
-      },
-      "@container": "@set",
-      "@id": "rec:resourceLanguages"
+      }
     },
     "externalIds": {
+      "@container": "@set",
+      "@id": "rec:scopedIdentifier",
       "@context": {
         "scheme": "rec:scheme",
         "value": "rec:id"
-      },
-      "@container": "@set",
-      "@id": "rec:scopedIdentifier"
+      }
     },
     "themes": {
+      "@container": "@set",
+      "@id": "rec:themes",
       "@context": {
         "concepts": {
+          "@id": "thns:concepts",
           "@context": {
             "id": {
-              "@id": "thns:id",
-              "@type": "xsd:string"
+              "@type": "xsd:string",
+              "@id": "thns:id"
             },
             "url": {
-              "@id": "@id",
-              "@type": "@id"
+              "@type": "@id",
+              "@id": "@id"
             }
           },
-          "@id": "thns:concepts",
           "@container": "@set"
         },
         "scheme": "thns:scheme"
-      },
-      "@container": "@set",
-      "@id": "rec:themes"
+      }
     },
     "formats": {
+      "@id": "rec:format",
       "@context": {
         "name": "rec:name",
         "mediaType": "rec:mediaType"
       },
       "@container": "@set",
-      "@id": "rec:format",
       "@type": "@id"
     },
     "contacts": {
@@ -391,7 +391,6 @@ Links to the schema:
       "@id": "dcat:contactPoint",
       "@type": "@id"
     },
-    "rights": "dcat:rights",
     "accessrights": "dct:accessRights",
     "variables": {
       "@container": "@id",
@@ -422,6 +421,7 @@ Links to the schema:
     "prov": "http://www.w3.org/ns/prov#",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "thns": "https://w3id.org/ogc/stac/themes/",
+    "rights": "dcat:rights",
     "@version": 1.1
   }
 }

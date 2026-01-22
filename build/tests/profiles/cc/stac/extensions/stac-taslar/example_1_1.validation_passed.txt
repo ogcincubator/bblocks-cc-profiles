@@ -1,7 +1,7 @@
 Validation report for ogc.profiles.cc.stac.extensions.stac-taslar - STAC TASLAR Extension
-Generated 2026-01-19T04:02:04.847563+00:00
+Generated 2026-01-22T04:00:29.468645+00:00
 === Files ===
-Using example_1_1.json from examples
+Using https://raw.githubusercontent.com/stac-extensions/themes/refs/heads/main/examples/collection.json from examples
 JSON-LD context is present - uplifting
 Output JSON-LD example_1_1.jsonld created
 Output Turtle example_1_1.ttl created

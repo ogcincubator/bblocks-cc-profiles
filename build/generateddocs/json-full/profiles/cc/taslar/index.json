@@ -10,7 +10,7 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "0.1",
-  "dateOfLastChange": "2026-01-16",
+  "dateOfLastChange": "2026-01-19",
   "link": "https://github.com/opengeospatial/bblock-template",
   "dependsOn": [
     "ogc.profiles.cc.tasl"
@@ -30,7 +30,7 @@
   "shaclShapes": {},
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/taslar/",
   "rdfData": [],
-  "validationPassed": false,
+  "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/bblocks-cc-profiles/blob/main/build/tests/profiles/cc/taslar/",
   "description": "## Title-Author-Source-License-Attribution-R?\n\nTBD\n",
   "examples": [
