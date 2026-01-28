@@ -523,8 +523,8 @@ Placeholder for a STAC TASLAR extension - defines
     stac:hasAsset [ ] ;
     stac:hasExtension "https://stac-extensions.github.io/themes/v1.0.0/schema.json" ;
     stac:version "1.0.0" ;
-    rec:themes [ thns:concepts [ thns:id "wiki::Syncline" ],
-                [ thns:id "wiki::Summer" ] ;
+    rec:themes [ thns:concepts [ thns:id "wiki::Summer" ],
+                [ thns:id "wiki::Syncline" ] ;
             thns:scheme "https://en.wikipedia.org" ],
         [ thns:concepts [ thns:id "geonames::2976077" ],
                 [ thns:id "geonames::3017382" ],
