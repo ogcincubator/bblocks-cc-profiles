@@ -11,7 +11,7 @@
   "itemClass": "schema",
   "register": "bblocks-stac",
   "version": "0.1",
-  "dateOfLastChange": "2026-02-01",
+  "dateOfLastChange": "2026-02-04",
   "dependsOn": [
     "ogc.ogc-utils.iri-or-curie",
     "ogc.profiles.cc.taslar"
