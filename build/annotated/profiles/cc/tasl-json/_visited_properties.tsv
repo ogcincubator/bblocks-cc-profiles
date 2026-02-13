@@ -1,5 +1,5 @@
 path	@id
-/title	http://purl.org/dc/terms/title
-/author	http://purl.org/dc/terms/author
-/license	dcat:license
-/source	
+/title	('http://purl.org/dc/terms/title', PosixPath('/github/workspace/build/annotated/profiles/cc/tasl-json/schema.yaml'))
+/author	('http://purl.org/dc/terms/author', PosixPath('/github/workspace/build/annotated/profiles/cc/tasl-json/schema.yaml'))
+/license	('dcat:license', PosixPath('/github/workspace/build/annotated/profiles/cc/tasl-json/schema.yaml'))
+/source	(None, PosixPath('/github/workspace/build/annotated/profiles/cc/tasl-json/schema.yaml'))
