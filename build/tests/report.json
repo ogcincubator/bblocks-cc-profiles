@@ -10,7 +10,7 @@
       "title": "Validation report for ogc.profiles.cc.tasl - TASL profile of DCAT",
       "bblockName": "TASL profile of DCAT",
       "bblockId": "ogc.profiles.cc.tasl",
-      "generated": "2026-02-19T04:17:44.372188+00:00",
+      "generated": "2026-02-22T04:17:28.108086+00:00",
       "result": true,
       "items": [
         {
@@ -49,7 +49,7 @@
       "title": "Validation report for ogc.profiles.cc.taslar - TASLAR profile of DCAT/TASL",
       "bblockName": "TASLAR profile of DCAT/TASL",
       "bblockId": "ogc.profiles.cc.taslar",
-      "generated": "2026-02-19T04:17:44.376970+00:00",
+      "generated": "2026-02-22T04:17:28.112925+00:00",
       "result": true,
       "items": [
         {
@@ -88,7 +88,7 @@
       "title": "Validation report for ogc.profiles.cc.tasl-json - Simple JSON properties for CC TASLAR profile",
       "bblockName": "Simple JSON properties for CC TASLAR profile",
       "bblockId": "ogc.profiles.cc.tasl-json",
-      "generated": "2026-02-19T04:17:44.430290+00:00",
+      "generated": "2026-02-22T04:17:28.276028+00:00",
       "result": true,
       "items": [
         {
@@ -158,7 +158,7 @@
       "title": "Validation report for ogc.profiles.cc.stac.extensions.stac-taslar - STAC TASLAR Extension",
       "bblockName": "STAC TASLAR Extension",
       "bblockId": "ogc.profiles.cc.stac.extensions.stac-taslar",
-      "generated": "2026-02-19T04:17:47.059092+00:00",
+      "generated": "2026-02-22T04:17:33.515088+00:00",
       "result": true,
       "items": [
         {
@@ -331,7 +331,7 @@
       "title": "Validation report for ogc.profiles.cc.stac.extensions.geodcat-stac-tasl - GeoDCAT profile of STAC TASL extension",
       "bblockName": "GeoDCAT profile of STAC TASL extension",
       "bblockId": "ogc.profiles.cc.stac.extensions.geodcat-stac-tasl",
-      "generated": "2026-02-19T04:17:49.178433+00:00",
+      "generated": "2026-02-22T04:17:34.939561+00:00",
       "result": true,
       "items": [
         {
