@@ -523,12 +523,12 @@ Placeholder for a STAC TASLAR extension - defines
     stac:hasAsset [ ] ;
     stac:hasExtension "https://stac-extensions.github.io/themes/v1.0.0/schema.json" ;
     stac:version "1.0.0" ;
-    rec:themes [ thns:concepts [ thns:id "wiki::Summer" ],
-                [ thns:id "wiki::Syncline" ] ;
+    rec:themes [ thns:concepts [ thns:id "wiki::Syncline" ],
+                [ thns:id "wiki::Summer" ] ;
             thns:scheme "https://en.wikipedia.org" ],
-        [ thns:concepts [ thns:id "geonames::11071625" ],
-                [ thns:id "geonames::2976077" ],
-                [ thns:id "geonames::3017382" ] ;
+        [ thns:concepts [ thns:id "geonames::3017382" ],
+                [ thns:id "geonames::11071625" ],
+                [ thns:id "geonames::2976077" ] ;
             thns:scheme "https://www.geonames.org" ] .
 
 
@@ -588,9 +588,7 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id"
         },
-        "type": "dct:type",
         "hreflang": "dct:language",
-        "title": "rdfs:label",
         "length": "dct:extent"
       },
       "@id": "rdfs:seeAlso"

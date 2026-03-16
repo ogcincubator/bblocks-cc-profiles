@@ -1,0 +1,34 @@
+[
+  {
+    "path": "/title",
+    "id": "http://purl.org/dc/terms/title",
+    "schema_type": "string",
+    "sources": [
+      "bblocks://ogc.profiles.cc.tasl-json"
+    ],
+    "effectiveId": "http://purl.org/dc/terms/title"
+  },
+  {
+    "path": "/author",
+    "id": "http://purl.org/dc/terms/author",
+    "sources": [
+      "bblocks://ogc.profiles.cc.tasl-json"
+    ],
+    "effectiveId": "http://purl.org/dc/terms/author"
+  },
+  {
+    "path": "/license",
+    "id": "dcat:license",
+    "sources": [
+      "bblocks://ogc.profiles.cc.tasl-json"
+    ],
+    "effectiveId": "dcat:license"
+  },
+  {
+    "path": "/source",
+    "schema_type": "string",
+    "sources": [
+      "bblocks://ogc.profiles.cc.tasl-json"
+    ]
+  }
+]
