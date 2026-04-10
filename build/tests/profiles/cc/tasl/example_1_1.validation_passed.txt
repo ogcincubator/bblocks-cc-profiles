@@ -1,5 +1,5 @@
 Validation report for ogc.profiles.cc.tasl - TASL profile of DCAT
-Generated 2026-04-07T04:20:05.162468+00:00
+Generated 2026-04-10T04:30:53.613952+00:00
 === Files ===
 Using examples/tasl.ttl from examples
 === End Files ===
