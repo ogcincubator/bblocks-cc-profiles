@@ -10,7 +10,7 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "0.1",
-  "dateOfLastChange": "2026-04-10",
+  "dateOfLastChange": "2023-09-18",
   "link": "https://github.com/opengeospatial/bblock-template",
   "dependsOn": [
     "ogc.profiles.cc.tasl"
@@ -40,9 +40,9 @@
       "snippets": [
         {
           "language": "ttl",
-          "ref": "examples/taslar.ttl",
+          "ref": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/taslar/examples/taslar.ttl",
           "code": "",
-          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/build/tests/profiles/cc/taslar/example_1_1.ttl"
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/taslar/build/tests/profiles/cc/taslar/example_1_1.ttl"
         }
       ]
     }
