@@ -41,17 +41,17 @@
         {
           "language": "json",
           "code": "{  \"id\": \"urn:mything\",\n   \"title\" : \"A title\",\n   \"author\": \"orcid:2002-11-22-33\",\n   \"source\": \"some text?\",\n   \"licence\": \"cc:ccby4\"\n}",
-          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/tasl-json/build/tests/profiles/cc/tasl-json/example_1_1.json"
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/build/tests/profiles/cc/tasl-json/example_1_1.json"
         },
         {
           "language": "jsonld",
           "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/tasl-json/context.jsonld\",\n  \"id\": \"urn:mything\",\n  \"title\": \"A title\",\n  \"author\": \"orcid:2002-11-22-33\",\n  \"source\": \"some text?\",\n  \"licence\": \"cc:ccby4\"\n}",
-          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/tasl-json/build/tests/profiles/cc/tasl-json/example_1_1.jsonld"
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/build/tests/profiles/cc/tasl-json/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix dct: <http://purl.org/dc/terms/> .\n\n[] dct:author \"orcid:2002-11-22-33\" ;\n    dct:title \"A title\" .\n\n",
-          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/tasl-json/build/tests/profiles/cc/tasl-json/example_1_1.ttl"
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/build/tests/profiles/cc/tasl-json/example_1_1.ttl"
         }
       ]
     }

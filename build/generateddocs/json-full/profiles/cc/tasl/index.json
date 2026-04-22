@@ -41,7 +41,7 @@
           "language": "ttl",
           "ref": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/tasl/examples/tasl.ttl",
           "code": "",
-          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/tasl/build/tests/profiles/cc/tasl/example_1_1.ttl"
+          "url": "https://ogcincubator.github.io/bblocks-cc-profiles/build/tests/profiles/cc/tasl/example_1_1.ttl"
         }
       ]
     }
