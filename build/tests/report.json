@@ -10,7 +10,7 @@
       "title": "Validation report for ogc.profiles.cc.tasl - TASL profile of DCAT",
       "bblockName": "TASL profile of DCAT",
       "bblockId": "ogc.profiles.cc.tasl",
-      "generated": "2026-04-22T04:31:00.220431+00:00",
+      "generated": "2026-04-25T04:23:05.857877+00:00",
       "result": true,
       "items": [
         {
@@ -49,7 +49,7 @@
       "title": "Validation report for ogc.profiles.cc.taslar - TASLAR profile of DCAT/TASL",
       "bblockName": "TASLAR profile of DCAT/TASL",
       "bblockId": "ogc.profiles.cc.taslar",
-      "generated": "2026-04-22T04:31:00.225965+00:00",
+      "generated": "2026-04-25T04:23:05.862889+00:00",
       "result": true,
       "items": [
         {
@@ -88,7 +88,7 @@
       "title": "Validation report for ogc.profiles.cc.tasl-json - Simple JSON properties for CC TASLAR profile",
       "bblockName": "Simple JSON properties for CC TASLAR profile",
       "bblockId": "ogc.profiles.cc.tasl-json",
-      "generated": "2026-04-22T04:31:00.388286+00:00",
+      "generated": "2026-04-25T04:23:05.912688+00:00",
       "result": true,
       "items": [
         {
@@ -158,7 +158,7 @@
       "title": "Validation report for ogc.profiles.cc.stac.extensions.stac-taslar - STAC TASLAR Extension",
       "bblockName": "STAC TASLAR Extension",
       "bblockId": "ogc.profiles.cc.stac.extensions.stac-taslar",
-      "generated": "2026-04-22T04:31:03.124561+00:00",
+      "generated": "2026-04-25T04:23:08.570862+00:00",
       "result": true,
       "items": [
         {
@@ -229,7 +229,13 @@
                 {
                   "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
                   "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
                     "geojson:LinkShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
                       "nodes": []
                     },
                     "geojson:GeometryShape/sh:or/rdf:first": {
@@ -237,16 +243,10 @@
                     },
                     "geojson:GeometryShape": {
                       "nodes": []
-                    },
-                    "geojson:FeatureShape": {
-                      "nodes": []
-                    },
-                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
-                      "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n"
                 },
                 {
                   "op": "shacl-report",
@@ -337,13 +337,10 @@
                 {
                   "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
                   "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
                     "geojson:LinkShape": {
-                      "nodes": []
-                    },
-                    "geojson:GeometryShape/sh:or/rdf:first": {
-                      "nodes": []
-                    },
-                    "geojson:GeometryShape": {
                       "nodes": []
                     },
                     "geojson:FeatureShape": {
@@ -351,12 +348,15 @@
                         "<https://example.com/stac/themes/example-2/example>"
                       ]
                     },
-                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
                       "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: <https://example.com/stac/themes/example-2/example>\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: <https://example.com/stac/themes/example-2/example>\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n"
                 },
                 {
                   "op": "shacl-report",
@@ -391,7 +391,7 @@
       "title": "Validation report for ogc.profiles.cc.stac.extensions.geodcat-stac-tasl - GeoDCAT profile of STAC TASL extension",
       "bblockName": "GeoDCAT profile of STAC TASL extension",
       "bblockId": "ogc.profiles.cc.stac.extensions.geodcat-stac-tasl",
-      "generated": "2026-04-22T04:31:04.377568+00:00",
+      "generated": "2026-04-25T04:23:10.753776+00:00",
       "result": true,
       "items": [
         {
@@ -462,10 +462,15 @@
                 {
                   "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
                   "focusNodes": {
-                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                    "geojson:LinkShape": {
                       "nodes": []
                     },
-                    "geojson:LinkShape": {
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<https://example.com/stac/accuracy/example-1/item>"
+                      ]
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
                       "nodes": []
                     },
                     "geojson:GeometryShape/sh:or/rdf:first": {
@@ -473,15 +478,10 @@
                     },
                     "geojson:GeometryShape": {
                       "nodes": []
-                    },
-                    "geojson:FeatureShape": {
-                      "nodes": [
-                        "<https://example.com/stac/accuracy/example-1/item>"
-                      ]
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: <https://example.com/stac/accuracy/example-1/item>\n"
+                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: <https://example.com/stac/accuracy/example-1/item>\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n"
                 },
                 {
                   "op": "shacl-report",

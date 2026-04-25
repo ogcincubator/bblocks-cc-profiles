@@ -2,12 +2,12 @@
   "name": "Profiles of OGC standards using CC profiles",
   "abstract": "Working space for exploring Creative Commons \n",
   "description": "TASL is described [here](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)\n",
-  "modified": "2026-04-22T04:30:51.678761",
+  "modified": "2026-04-25T04:23:01.323969",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"d9ddc99e7b570299b5d416f5a878a0842df97cca",
-      "shortCommitId": "\"d9ddc9",
-      "date": "2026-04-20T17:40:16+00:00\""
+      "commitId": "\"a45f3f710418bc91a1b2148677a2104cfc43e7d8",
+      "shortCommitId": "\"a45f3f",
+      "date": "2026-04-23T10:40:45+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/bblocks-cc-profiles",
@@ -49,7 +49,6 @@
       ],
       "shaclShapes": {},
       "sourceFiles": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/tasl/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-cc-profiles/blob/main/build/tests/profiles/cc/tasl/",
       "documentation": {
@@ -96,7 +95,6 @@
       ],
       "shaclShapes": {},
       "sourceFiles": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/taslar/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-cc-profiles/blob/main/build/tests/profiles/cc/taslar/",
       "documentation": {
@@ -127,8 +125,8 @@
       "version": "0.1",
       "dateOfLastChange": "2023-12-09",
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.profiles.cc.taslar"
+        "ogc.profiles.cc.taslar",
+        "ogc.ogc-utils.iri-or-curie"
       ],
       "sources": [],
       "scope": "contrib",
@@ -145,7 +143,6 @@
       "sourceLdContext": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/tasl-json/context.jsonld",
       "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/tasl-json/resolvedProperties.json",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/tasl-json/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-cc-profiles/blob/main/build/tests/profiles/cc/tasl-json/",
       "documentation": {
@@ -196,10 +193,10 @@
         ]
       },
       "dependsOn": [
+        "ogc.profiles.cc.tasl-json",
         "ogc.contrib.stac.collection-v1-0-0",
         "ogc.contrib.stac.collection",
         "ogc.contrib.stac.item",
-        "ogc.profiles.cc.tasl-json",
         "ogc.contrib.stac.item-v1-0-0"
       ],
       "ldContext": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/stac-taslar/context.jsonld",
@@ -211,7 +208,6 @@
       "sourceLdContext": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/stac/extensions/stac-taslar/context.jsonld",
       "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/stac-taslar/resolvedProperties.json",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/stac/extensions/stac-taslar/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-cc-profiles/blob/main/build/tests/profiles/cc/stac/extensions/stac-taslar/",
       "documentation": {
@@ -239,9 +235,9 @@
       "itemClass": "schema",
       "register": "ogc-incubator",
       "dependsOn": [
-        "ogc.geo.geodcat.stac.geodcat-stac-collection",
+        "ogc.geo.geodcat.stac.geodcat-stac-item",
         "ogc.contrib.stac.extensions.accuracy",
-        "ogc.geo.geodcat.stac.geodcat-stac-item"
+        "ogc.geo.geodcat.stac.geodcat-stac-collection"
       ],
       "version": "0.1",
       "dateOfLastChange": "2023-09-18",
@@ -272,7 +268,6 @@
       "sourceLdContext": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/stac/extensions/geodcat-stac-tasl/context.jsonld",
       "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/geodcat-stac-tasl/resolvedProperties.json",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/stac/extensions/geodcat-stac-tasl/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-cc-profiles/blob/main/build/tests/profiles/cc/stac/extensions/geodcat-stac-tasl/",
       "documentation": {

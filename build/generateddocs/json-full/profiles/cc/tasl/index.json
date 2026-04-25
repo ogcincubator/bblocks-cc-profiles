@@ -28,7 +28,6 @@
   ],
   "shaclShapes": {},
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cc-profiles/_sources/tasl/",
-  "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/bblocks-cc-profiles/blob/main/build/tests/profiles/cc/tasl/",
   "description": "## Title-Author-Source-License\n\nTBD\n",
