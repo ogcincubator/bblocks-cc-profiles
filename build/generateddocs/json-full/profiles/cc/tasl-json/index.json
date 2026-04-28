@@ -13,8 +13,8 @@
   "version": "0.1",
   "dateOfLastChange": "2023-12-09",
   "dependsOn": [
-    "ogc.profiles.cc.taslar",
-    "ogc.ogc-utils.iri-or-curie"
+    "ogc.ogc-utils.iri-or-curie",
+    "ogc.profiles.cc.taslar"
   ],
   "sources": [],
   "scope": "contrib",

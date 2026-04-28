@@ -2,7 +2,7 @@
   "name": "Profiles of OGC standards using CC profiles",
   "abstract": "Working space for exploring Creative Commons \n",
   "description": "TASL is described [here](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)\n",
-  "modified": "2026-04-25T04:23:01.323969",
+  "modified": "2026-04-28T04:42:08.779321",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"a45f3f710418bc91a1b2148677a2104cfc43e7d8",
@@ -125,8 +125,8 @@
       "version": "0.1",
       "dateOfLastChange": "2023-12-09",
       "dependsOn": [
-        "ogc.profiles.cc.taslar",
-        "ogc.ogc-utils.iri-or-curie"
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.profiles.cc.taslar"
       ],
       "sources": [],
       "scope": "contrib",
@@ -193,10 +193,10 @@
         ]
       },
       "dependsOn": [
+        "ogc.contrib.stac.item",
         "ogc.profiles.cc.tasl-json",
         "ogc.contrib.stac.collection-v1-0-0",
         "ogc.contrib.stac.collection",
-        "ogc.contrib.stac.item",
         "ogc.contrib.stac.item-v1-0-0"
       ],
       "ldContext": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/stac-taslar/context.jsonld",
