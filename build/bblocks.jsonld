@@ -194,12 +194,12 @@
   "name": "Building Blocks - Profiles of OGC standards using CC profiles",
   "abstract": "Working space for exploring Creative Commons \n",
   "description": "TASL is described [here](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)\n",
-  "modified": "2026-04-28T04:42:08.779321",
+  "modified": "2026-05-01T04:47:36.390867",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"a45f3f710418bc91a1b2148677a2104cfc43e7d8",
-      "shortCommitId": "\"a45f3f",
-      "date": "2026-04-23T10:40:45+00:00\""
+      "commitId": "\"e7a962626cb1b8416eac2178e4b7326d31314fcd",
+      "shortCommitId": "\"e7a962",
+      "date": "2026-04-28T10:25:15+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/bblocks-cc-profiles",
@@ -378,8 +378,8 @@
       "version": "0.1",
       "dateOfLastChange": "2023-12-09",
       "dependsOn": [
-        "bblocks://ogc.ogc-utils.iri-or-curie",
-        "bblocks://ogc.profiles.cc.taslar"
+        "bblocks://ogc.profiles.cc.taslar",
+        "bblocks://ogc.ogc-utils.iri-or-curie"
       ],
       "sources": [],
       "scope": "contrib",
@@ -489,10 +489,10 @@
       ],
       "dependsOn": [
         "bblocks://ogc.contrib.stac.item",
-        "bblocks://ogc.profiles.cc.tasl-json",
         "bblocks://ogc.contrib.stac.collection-v1-0-0",
+        "bblocks://ogc.contrib.stac.item-v1-0-0",
         "bblocks://ogc.contrib.stac.collection",
-        "bblocks://ogc.contrib.stac.item-v1-0-0"
+        "bblocks://ogc.profiles.cc.tasl-json"
       ],
       "ldContext": {
         "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/stac-taslar/context.jsonld",
@@ -560,8 +560,8 @@
       "itemClass": "schema",
       "register": "ogc-incubator",
       "dependsOn": [
-        "bblocks://ogc.geo.geodcat.stac.geodcat-stac-item",
         "bblocks://ogc.contrib.stac.extensions.accuracy",
+        "bblocks://ogc.geo.geodcat.stac.geodcat-stac-item",
         "bblocks://ogc.geo.geodcat.stac.geodcat-stac-collection"
       ],
       "version": "0.1",
