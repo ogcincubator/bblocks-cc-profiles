@@ -194,7 +194,7 @@
   "name": "Building Blocks - Profiles of OGC standards using CC profiles",
   "abstract": "Working space for exploring Creative Commons \n",
   "description": "TASL is described [here](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)\n",
-  "modified": "2026-05-13T04:46:43.706826",
+  "modified": "2026-05-16T04:38:44.135099",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"6b01f188cc614cc2e65f4bf86a2623f98f101dfd",
@@ -378,8 +378,8 @@
       "version": "0.1",
       "dateOfLastChange": "2023-12-09",
       "dependsOn": [
-        "bblocks://ogc.ogc-utils.iri-or-curie",
-        "bblocks://ogc.profiles.cc.taslar"
+        "bblocks://ogc.profiles.cc.taslar",
+        "bblocks://ogc.ogc-utils.iri-or-curie"
       ],
       "sources": [],
       "scope": "contrib",
@@ -488,11 +488,11 @@
         }
       ],
       "dependsOn": [
-        "bblocks://ogc.contrib.stac.item",
         "bblocks://ogc.contrib.stac.item-v1-0-0",
-        "bblocks://ogc.contrib.stac.collection",
         "bblocks://ogc.contrib.stac.collection-v1-0-0",
-        "bblocks://ogc.profiles.cc.tasl-json"
+        "bblocks://ogc.profiles.cc.tasl-json",
+        "bblocks://ogc.contrib.stac.collection",
+        "bblocks://ogc.contrib.stac.item"
       ],
       "ldContext": {
         "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/stac-taslar/context.jsonld",
@@ -561,8 +561,8 @@
       "register": "ogc-incubator",
       "dependsOn": [
         "bblocks://ogc.geo.geodcat.stac.geodcat-stac-item",
-        "bblocks://ogc.geo.geodcat.stac.geodcat-stac-collection",
-        "bblocks://ogc.contrib.stac.extensions.accuracy"
+        "bblocks://ogc.contrib.stac.extensions.accuracy",
+        "bblocks://ogc.geo.geodcat.stac.geodcat-stac-collection"
       ],
       "version": "0.1",
       "dateOfLastChange": "2023-09-18",
