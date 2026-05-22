@@ -1,5 +1,5 @@
 Validation report for ogc.profiles.cc.taslar - TASLAR profile of DCAT/TASL
-Generated 2026-05-19T04:50:26.042655+00:00
+Generated 2026-05-22T04:51:29.572356+00:00
 === Files ===
 Using examples/taslar.ttl from examples
 === End Files ===
