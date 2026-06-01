@@ -2,7 +2,7 @@
   "name": "Profiles of OGC standards using CC profiles",
   "abstract": "Working space for exploring Creative Commons \n",
   "description": "TASL is described [here](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)\n",
-  "modified": "2026-05-31T05:01:52.575755",
+  "modified": "2026-06-01T05:12:02.049696",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"ad9a45b0f8be60a98bc10be85fef3d86f30f87c5",
@@ -193,11 +193,11 @@
         ]
       },
       "dependsOn": [
-        "ogc.profiles.cc.tasl-json",
-        "ogc.contrib.stac.item",
         "ogc.contrib.stac.item-v1-0-0",
         "ogc.contrib.stac.collection",
-        "ogc.contrib.stac.collection-v1-0-0"
+        "ogc.contrib.stac.collection-v1-0-0",
+        "ogc.contrib.stac.item",
+        "ogc.profiles.cc.tasl-json"
       ],
       "ldContext": "https://ogcincubator.github.io/bblocks-cc-profiles/build/annotated/profiles/cc/stac/extensions/stac-taslar/context.jsonld",
       "schema": {
@@ -235,8 +235,8 @@
       "itemClass": "schema",
       "register": "ogc-incubator",
       "dependsOn": [
-        "ogc.geo.geodcat.stac.geodcat-stac-collection",
         "ogc.contrib.stac.extensions.accuracy",
+        "ogc.geo.geodcat.stac.geodcat-stac-collection",
         "ogc.geo.geodcat.stac.geodcat-stac-item"
       ],
       "version": "0.1",
