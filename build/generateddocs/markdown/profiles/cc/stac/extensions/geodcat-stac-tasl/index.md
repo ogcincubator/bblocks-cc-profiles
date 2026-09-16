@@ -149,9 +149,10 @@ Defines a STAC extension for implementing the TASL profile
 
 #### ttl
 ```ttl
+@prefix accuracy: <https://w3id.org/ogc/stac/accuracy/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix ns1: <accuracy:> .
+@prefix ns1: <https://w3id.org/ogc/stac/assets/> .
 @prefix ns2: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -160,20 +161,20 @@ Defines a STAC extension for implementing the TASL profile
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://example.com/stac/accuracy/example-1/item> a geojson:Feature ;
-    ns1:geometric_rmse 1 ;
-    ns1:geometric_x_bias 0 ;
-    ns1:geometric_x_stddev 5e-01 ;
-    ns1:geometric_y_bias 0 ;
-    ns1:geometric_y_stddev 5e-01 ;
-    ns1:measurement_absolute 2e-02 ;
-    ns1:measurement_relative 1e-02 ;
     dcterms:date "2020-12-11T22:38:32+00:00"^^xsd:dateTime ;
     rdfs:seeAlso [ ns2:relation <http://www.iana.org/assignments/relation/self> ;
             oa:hasTarget <https://example.com/examples/item.json> ] ;
     geojson:bbox ( 1.729e+02 1.3e+00 173 1.4e+00 ) ;
     geojson:geometry [ a geojson:Polygon ;
             geojson:coordinates ( ( ( 1.729e+02 1.3e+00 ) ( 173 1.3e+00 ) ( 173 1.4e+00 ) ( 1.729e+02 1.4e+00 ) ( 1.729e+02 1.3e+00 ) ) ) ] ;
-    stac:hasAsset [ ] ;
+    accuracy:geometric_rmse 1e+00 ;
+    accuracy:geometric_x_bias 0e+00 ;
+    accuracy:geometric_x_stddev 5e-01 ;
+    accuracy:geometric_y_bias 0e+00 ;
+    accuracy:geometric_y_stddev 5e-01 ;
+    accuracy:measurement_absolute 2e-02 ;
+    accuracy:measurement_relative 1e-02 ;
+    stac:hasAsset [ ns1:data <https://example.com/examples/file.xyz> ] ;
     stac:hasExtension "https://stac-extensions.github.io/accuracy/v1.0.0-beta.1/schema.json" ;
     stac:version "1.0.0" .
 
@@ -241,14 +242,26 @@ Links to the schema:
       "@id": "dct:date",
       "@type": "xsd:dateTime"
     },
+    "start_datetime": {
+      "@id": "stac:start_datetime",
+      "@type": "xsd:dateTime"
+    },
+    "end_datetime": {
+      "@id": "stac:end_datetime",
+      "@type": "xsd:dateTime"
+    },
     "created": "dct:created",
     "updated": "dct:modified",
     "license": "dcat:license",
+    "providers": "stac:hasProvider",
     "assets": {
       "@context": {
+        "@vocab": "https://w3id.org/ogc/stac/assets/",
+        "href": "@id",
         "type": "dct:format",
         "roles": {
-          "@id": "stac:roles",
+          "@id": "stac:hasAssetroles",
+          "@type": "xsd:string",
           "@container": "@set"
         }
       },
@@ -315,6 +328,34 @@ Links to the schema:
         }
       },
       "@id": "rec:hasLinkTemplate"
+    },
+    "accuracy:geometric_x_bias": {
+      "@id": "accuracy:geometric_x_bias",
+      "@type": "xsd:double"
+    },
+    "accuracy:geometric_y_bias": {
+      "@id": "accuracy:geometric_y_bias",
+      "@type": "xsd:double"
+    },
+    "accuracy:geometric_x_stddev": {
+      "@id": "accuracy:geometric_x_stddev",
+      "@type": "xsd:double"
+    },
+    "accuracy:geometric_y_stddev": {
+      "@id": "accuracy:geometric_y_stddev",
+      "@type": "xsd:double"
+    },
+    "accuracy:geometric_rmse": {
+      "@id": "accuracy:geometric_rmse",
+      "@type": "xsd:double"
+    },
+    "accuracy:measurement_relative": {
+      "@id": "accuracy:measurement_relative",
+      "@type": "xsd:double"
+    },
+    "accuracy:measurement_absolute": {
+      "@id": "accuracy:measurement_absolute",
+      "@type": "xsd:double"
     },
     "language": {
       "@id": "rec:language",
@@ -399,6 +440,7 @@ Links to the schema:
     "dct": "http://purl.org/dc/terms/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",
+    "accuracy": "https://w3id.org/ogc/stac/accuracy/",
     "geojson": "https://purl.org/geojson/vocab#",
     "dcat": "http://www.w3.org/ns/dcat#",
     "rec": "https://www.opengis.net/def/ogc-api/records/",
