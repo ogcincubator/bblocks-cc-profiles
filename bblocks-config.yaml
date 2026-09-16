@@ -9,8 +9,7 @@ description: |
 
 imports:
   - default
-  - https://ogcincubator.github.io/geodcat-ogcapi-records
-  -
+  - '@ogc/geodcat-ogcapi-records'
   # note that a PROV profile is intended as a key example of extending GeoDCAT
   # - https://ogcincubator.github.io/bblock-prov-schema/build/register.json
 
