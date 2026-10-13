@@ -213,7 +213,7 @@
   "name": "Building Blocks - Profiles of OGC standards using CC profiles",
   "abstract": "Working space for exploring Creative Commons \n",
   "description": "TASL is described [here](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)\n",
-  "modified": "2026-10-10T03:43:57.640775",
+  "modified": "2026-10-13T03:49:34.036742",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"d25453cad0e4972e6a638db3dca636f023f9397a",
