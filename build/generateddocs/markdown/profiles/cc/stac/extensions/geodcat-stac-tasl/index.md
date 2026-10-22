@@ -192,6 +192,11 @@ allOf:
 - anyOf:
   - $ref: https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/stac/geodcat-stac-item/schema.yaml
   - $ref: https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/stac/geodcat-stac-collection/schema.yaml
+x-bblocks-metadata:
+  itemIdentifier: ogc.profiles.cc.stac.extensions.geodcat-stac-tasl
+  register: https://ogcincubator.github.io/bblocks-cc-profiles/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-19'
 
 ```
 

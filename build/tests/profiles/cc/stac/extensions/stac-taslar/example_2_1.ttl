@@ -24,8 +24,8 @@
                 [ thns:id "geonames::11071625" ],
                 [ thns:id "geonames::2976077" ] ;
             thns:scheme "https://www.geonames.org" ],
-        [ thns:concepts [ thns:id "wiki::Syncline" ],
-                [ thns:id "wiki::Summer" ] ;
+        [ thns:concepts [ thns:id "wiki::Summer" ],
+                [ thns:id "wiki::Syncline" ] ;
             thns:scheme "https://en.wikipedia.org" ] .
 
 <https://example.com/stac/themes/example-2/example.file> dcterms:format "text/plain" .
