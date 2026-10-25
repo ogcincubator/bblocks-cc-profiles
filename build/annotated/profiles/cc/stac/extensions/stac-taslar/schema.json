@@ -46,6 +46,6 @@
     "itemIdentifier": "ogc.profiles.cc.stac.extensions.stac-taslar",
     "register": "https://ogcincubator.github.io/bblocks-cc-profiles/build/register.json",
     "version": "0.1",
-    "dateOfLastChange": "2026-10-19"
+    "dateOfLastChange": "2026-10-22"
   }
 }
