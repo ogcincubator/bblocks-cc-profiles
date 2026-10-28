@@ -20,6 +20,6 @@
     "itemIdentifier": "ogc.profiles.cc.stac.extensions.geodcat-stac-tasl",
     "register": "https://ogcincubator.github.io/bblocks-cc-profiles/build/register.json",
     "version": "0.1",
-    "dateOfLastChange": "2026-10-22"
+    "dateOfLastChange": "2026-10-25"
   }
 }
