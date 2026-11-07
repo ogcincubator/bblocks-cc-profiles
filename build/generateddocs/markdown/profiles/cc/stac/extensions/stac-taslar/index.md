@@ -245,10 +245,10 @@ Placeholder for a STAC TASLAR extension - defines
     dcterms:description "A description" ;
     dcterms:extent [ ] ;
     dcterms:title "A title" ;
-    rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            oa:hasTarget <https://example.com/examples/collection.json> ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/item> ;
-            oa:hasTarget <https://example.com/examples/item.json> ] ;
+    rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/item> ;
+            oa:hasTarget <https://example.com/examples/item.json> ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            oa:hasTarget <https://example.com/examples/collection.json> ] ;
     dcat:license "Apache-2.0" ;
     stac:hasExtension "https://stac-extensions.github.io/themes/v1.0.0/schema.json" ;
     stac:version "1.0.0" ;
@@ -527,9 +527,9 @@ Placeholder for a STAC TASLAR extension - defines
     rec:themes [ thns:concepts [ thns:id "wiki::Summer" ],
                 [ thns:id "wiki::Syncline" ] ;
             thns:scheme "https://en.wikipedia.org" ],
-        [ thns:concepts [ thns:id "geonames::2976077" ],
+        [ thns:concepts [ thns:id "geonames::3017382" ],
                 [ thns:id "geonames::11071625" ],
-                [ thns:id "geonames::3017382" ] ;
+                [ thns:id "geonames::2976077" ] ;
             thns:scheme "https://www.geonames.org" ] .
 
 <https://example.com/stac/themes/example-2/example.file> dcterms:format "text/plain" .
@@ -568,7 +568,7 @@ x-bblocks-metadata:
   itemIdentifier: ogc.profiles.cc.stac.extensions.stac-taslar
   register: https://ogcincubator.github.io/bblocks-cc-profiles/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-11-01'
+  dateOfLastChange: '2026-11-04'
 
 ```
 
