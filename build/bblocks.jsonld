@@ -217,7 +217,7 @@
   "name": "Building Blocks - Profiles of OGC standards using CC profiles",
   "abstract": "Working space for exploring Creative Commons \n",
   "description": "TASL is described [here](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)\n",
-  "modified": "2026-11-10T03:32:05.893577",
+  "modified": "2026-11-13T03:32:16.666392",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"2deb5c60331691186d997e4f6ae9aab18b548ce5",
@@ -272,7 +272,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-07",
+      "dateOfLastChange": "2026-11-10",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
         "bblocks://ogc.geo.geodcat.dcat"
@@ -336,7 +336,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-07",
+      "dateOfLastChange": "2026-11-10",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
         "bblocks://ogc.profiles.cc.tasl"
@@ -401,7 +401,7 @@
       "itemClass": "schema",
       "register": "bblocks-stac",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-07",
+      "dateOfLastChange": "2026-11-10",
       "dependsOn": [
         "bblocks://ogc.ogc-utils.iri-or-curie",
         "bblocks://ogc.profiles.cc.taslar"
@@ -480,7 +480,7 @@
       "itemClass": "schema",
       "register": "bblocks-stac",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-07",
+      "dateOfLastChange": "2026-11-10",
       "sources": [
         {
           "title": "GitHub Repository",
@@ -619,7 +619,7 @@
         "bblocks://ogc.geo.geodcat.stac.geodcat-stac-item"
       ],
       "version": "0.1",
-      "dateOfLastChange": "2026-11-07",
+      "dateOfLastChange": "2026-11-10",
       "link": "https://github.com/opengeospatial/geodcat-ogcapi-records",
       "sources": [],
       "scope": "dev",
