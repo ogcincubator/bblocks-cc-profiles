@@ -527,8 +527,8 @@ Placeholder for a STAC TASLAR extension - defines
     rec:themes [ thns:concepts [ thns:id "wiki::Summer" ],
                 [ thns:id "wiki::Syncline" ] ;
             thns:scheme "https://en.wikipedia.org" ],
-        [ thns:concepts [ thns:id "geonames::3017382" ],
-                [ thns:id "geonames::2976077" ],
+        [ thns:concepts [ thns:id "geonames::2976077" ],
+                [ thns:id "geonames::3017382" ],
                 [ thns:id "geonames::11071625" ] ;
             thns:scheme "https://www.geonames.org" ] .
 
@@ -568,7 +568,7 @@ x-bblocks-metadata:
   itemIdentifier: ogc.profiles.cc.stac.extensions.stac-taslar
   register: https://ogcincubator.github.io/bblocks-cc-profiles/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-11-16'
+  dateOfLastChange: '2026-11-19'
 
 ```
 
